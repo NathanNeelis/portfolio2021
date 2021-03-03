@@ -73,7 +73,28 @@ h1:hover span {
     animation-play-state: paused;
 }
 
-main section {
+
+/* ABOUT ME  */
+main section:first-child {
+    height: 50vh;
+    background: var(--gray);
+}
+
+main section:first-child h2 {
+    font-family: serif;
+}
+
+main section:first-child article {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 47% 53% 70% 30% / 30% 30% 70% 70%;
+    background: coral;
+}
+
+
+/* PROJECTS  */
+
+main section:nth-child(2) {
     width: min(70rem, 90%);
     margin: 2rem auto;
     display: grid;
@@ -84,25 +105,25 @@ main section {
     row-gap: 1rem;
 }
 
-section h2 {
+section:nth-child(2) h2 {
     font-size: clamp(2.5rem, 4vw, 6rem);
     padding: 1rem 0;
     background: coral;
 }
 
-section>header {
+section:nth-child(2)>header {
     grid-column: 1 / -1;
     /* justify-self: center; */
     text-align: center;
 }
 
-article {
+section:nth-child(2) article {
     height: 15rem;
     background: var(--gray);
     padding: 2rem;
 }
 
-article:hover {
+section:nth-child(2) article:hover {
     background: var(--aqua);
 }
 
