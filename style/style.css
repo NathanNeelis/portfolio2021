@@ -15,6 +15,8 @@
     --white: #fff;
     --aqua: #0ED2CB;
     --gray: #ebebeb;
+
+    --bodytext: 'Quicksand', sans-serif;
 }
 
 html {
@@ -31,20 +33,39 @@ h2 {
     font-family: 'Dancing Script', cursive;
 }
 
+/* HEADER  */
 body>header {
     height: 100vh;
     width: 100vw;
     background: var(--aqua);
 }
 
+body>header::after {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.2;
+    z-index: 1;
+
+    /* background-image: url(../images/header-image1.jpg); */
+    background-image: url(../images/alpinisme3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 body>header>div {
     height: 100vh;
+    border: 1px solid var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    /* background: coral; */
 }
 
 /* RESOURCE VARIABLE TEXT: https://codepen.io/michellebarker/pen/bPEWGK  */
@@ -55,22 +76,44 @@ body>header h1 {
     font-size: clamp(5rem, 10vw, 15rem);
     font-family: "IBM Plex Sans Roman", Times;
     color: var(--white);
+    z-index: 2;
 }
 
 body>header h2 {
     font-size: clamp(2.5rem, 4vw, 6rem);
     color: var(--white);
+    z-index: 2;
 }
 
 h1 .char {
     --delay: calc((var(--char-index) + 1) * 400ms);
-    animation: breathe 4s infinite both;
+    animation: breathe 5.5s infinite both;
     transform-origin: center center;
     animation-delay: calc(var(--delay) - 2s);
 }
 
 h1:hover span {
     animation-play-state: paused;
+}
+
+body>header>div>a {
+    text-decoration: none;
+    color: var(--white);
+    margin: 3rem 0 0 0;
+    background: coral;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    z-index: 3;
+    font-family: var(--bodytext);
+    font-weight: 400;
+    /* border: 2px solid coral; */
+    box-shadow: 0px 0px 13px -1px #8C8C8C;
+}
+
+body>header>div>a:hover {
+    background: var(--white);
+    color: coral;
+    /* border: 2px solid coral; */
 }
 
 
@@ -99,7 +142,6 @@ main section:nth-child(2) {
     margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    /* justify-self: center; */
     justify-items: stretch;
     column-gap: 1rem;
     row-gap: 1rem;
@@ -113,7 +155,6 @@ section:nth-child(2) h2 {
 
 section:nth-child(2)>header {
     grid-column: 1 / -1;
-    /* justify-self: center; */
     text-align: center;
 }
 
