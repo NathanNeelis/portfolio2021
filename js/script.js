@@ -20,10 +20,8 @@ window.addEventListener("DOMContentLoaded", function () {
         storage.setItem('mail', emailContact);
 
         form.reset();
-        setContactForm()
-        // button.style = "display: none ";
-        status.classList.add('succes');
-
+        setContactForm();
+        status.innerHTML = "";
         // Create IMG element
         let succesIcon = document.createElement('img');
         succesIcon.src = 'images/check.svg'
@@ -35,6 +33,8 @@ window.addEventListener("DOMContentLoaded", function () {
         status.appendChild(succesIcon);
         status.appendChild(succesText);
         // status.innerHTML = "Thanks!";
+
+        status.classList.add('succes');
     }
 
     function error() {

@@ -276,7 +276,7 @@ main section:nth-child(even) article h3 {
     z-index: 3;
 
     transition: all 0.5s cubic-bezier(.51, -0.51, .77, 1.24);
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 main section:nth-child(even) article:hover .projectCard-text {
@@ -432,6 +432,7 @@ textarea {
     color: var(--darkgray);
 }
 
+/* RESOURCE https://css-tricks.com/form-validation-ux-html-css/  */
 input:valid {
     background-image: url(../images/validation_check.svg);
     background-repeat: no-repeat;
@@ -495,12 +496,28 @@ form div:last-child {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0;
+    padding: 0 1rem;
 }
 
 form div:last-child img {
     width: 1rem;
-    margin-right: .5rem;
+    margin: .5rem .5rem .5rem 0;
 }
+
+form div:last-child.succes {
+    opacity: 1;
+    animation: statusText 8s ease forwards;
+}
+
+form div:last-child.error {
+    opacity: 1;
+    animation: statusText 8s ease forwards;
+}
+
+
 
 /* Resource: Check by Arthur Shlain from the Noun Project  */
 
@@ -592,6 +609,22 @@ footer section:nth-child(2) article div {
     }
 }
 
+@keyframes statusText {
+    0% {
+        opacity: 1;
+        /* pointer-events: all; */
+    }
+
+    90% {
+        opacity: 1;
+        /* pointer-events: all; */
+    }
+
+    100% {
+        opacity: 0;
+        /* pointer-events: none; */
+    }
+}
 
 
 
