@@ -233,7 +233,11 @@ main section:nth-child(even) article img {
 main section:nth-child(even) article h3 {
     padding-bottom: 1.5rem;
     font-size: clamp(1.1rem, 1.5vw, 1.2rem);
-
+    /* white-space: nowrap; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
     /* FIX THIS LINE GOES OVER 2 LINES */
 }
 
@@ -265,7 +269,7 @@ main section:nth-child(even) article h3 {
 }
 
 .projectCard-text {
-    padding: 2rem .5rem;
+    padding: 2rem 0rem 2rem 1rem;
     padding-top: 12.5rem;
     color: black;
     opacity: 1;
@@ -274,9 +278,13 @@ main section:nth-child(even) article h3 {
     position: absolute;
     clip-path: inset(80% 0% 0%);
     z-index: 3;
-
     transition: all 0.5s cubic-bezier(.51, -0.51, .77, 1.24);
-    /* white-space: nowrap; */
+
+}
+
+.projectCard-text p {
+    /* padding-left: .5rem; */
+    padding-right: 1.5rem;
 }
 
 main section:nth-child(even) article:hover .projectCard-text {
@@ -302,7 +310,7 @@ main section:nth-child(2n+3) {
     background: var(--gray);
 }
 
-main section:last-child {
+main section:nth-child(2n+3) {
     padding-bottom: 2rem;
 }
 
@@ -403,7 +411,6 @@ legend span {
 
 form:hover legend span {
     animation-play-state: running;
-    /* font-size: 200%; */
 }
 
 
@@ -416,7 +423,7 @@ legend {
     margin: 0 auto;
     display: block;
     position: absolute;
-    top: -5%;
+    top: -4%;
     text-align: center;
     background: var(--aqua);
     right: calc(50% - 5rem);
@@ -491,7 +498,6 @@ label {
 
 form div:last-child {
     color: white;
-    /* background: yellow; */
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -526,7 +532,6 @@ form div:last-child.error {
 footer {
     width: 100vw;
     background: var(--aqua);
-    /* margin-top: 4rem; */
     padding-bottom: 4rem;
 }
 
@@ -556,7 +561,7 @@ footer section:nth-child(2) h2 {
     background-color: var(--aqua);
     position: absolute;
     width: 13rem;
-    top: -10%;
+    top: -14%;
     left: calc(50% - 6rem);
 
 }
