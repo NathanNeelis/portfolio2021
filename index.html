@@ -34,7 +34,7 @@
         <div>
             <h1 data-splitting>Portfolio</h1>
             <h2>Nathan Neelis</h2>
-            <a href="#">Contact me!</a>
+            <a href="#contactMe">Contact me!</a>
         </div>
 
 
@@ -65,6 +65,7 @@
             </header>
             <article>
                 <img src="images/wafs/wafs_project_hero.jpg" alt="Movie web app screenshot">
+                <div class="greenfade"></div>
                 <div class="projectCard"></div>
                 <div class="projectCard-text">
                     <h3>Project Movies Web app</h3>
@@ -74,6 +75,7 @@
             </article>
             <article>
                 <img src="images/cssttr/cssttr_project_hero.jpg" alt="CSS menu card in css screenshot">
+                <div class="greenfade"></div>
                 <div class="projectCard"></div>
                 <div class="projectCard-text">
                     <h3>Project Menu card zen garden</h3>
@@ -84,6 +86,7 @@
             </article>
             <article>
                 <img src="images/dvcorona/dvcorona_project-hero.png" alt="Corona in your study web app screenshot">
+                <div class="greenfade"></div>
                 <div class="projectCard"></div>
                 <div class="projectCard-text">
                     <h3>Project Corona during a study</h3>
@@ -93,6 +96,7 @@
             </article>
             <article>
                 <img src="images/dvrdw/dvrdw_project_hero.png" alt="Leave your car web app screenshot">
+                <div class="greenfade"></div>
                 <div class="projectCard"></div>
                 <div class="projectCard-text">
                     <h3>Project leave your car</h3>
@@ -104,6 +108,7 @@
             <article>
                 <a href="/friendship">
                     <img src="images/friendship/friendship_project-hero.jpg" alt="Friendship web app screenshot">
+                    <div class="greenfade"></div>
                     <div class="projectCard"></div>
                     <div class="projectCard-text">
                         <h3>Project Friendship</h3>
@@ -116,6 +121,7 @@
 
             <article>
                 <img src="images/foodtrucks/foodtruck_project_hero.jpg" alt="Foodtruck web app screenshot">
+                <div class="greenfade"></div>
                 <div class="projectCard"></div>
                 <div class="projectCard-text">
                     <h3>Project Foodtrucks</h3>
@@ -128,6 +134,7 @@
             </article>
             <article>
                 <img src="images/storygrafie/storygrafie_project_hero.jpg" alt="Storygrafie website screenshot">
+                <div class="greenfade"></div>
                 <div class="projectCard"></div>
                 <div class="projectCard-text">
                     <h3>Project ImageNaat Storiegrafie</h3>
@@ -248,8 +255,58 @@
             </div>
 
         </section>
+
+
     </main>
-    <footer></footer>
+    <footer>
+
+        <section id="contactMe">
+            <!-- <h2>Get in touch</h2> -->
+            <!-- <form action="" method="POST"> -->
+            <form action="https://formsubmit.co/95f553eaa06c0135aed75d80a5b7116d" method="POST" id="my-form">
+                <!-- <form action="https://formsubmit.co/your-random-string" method="POST" /> -->
+                <fieldset>
+                    <legend> Say hello <span>👋</span></legend>
+                    <div>
+                        <label for="name"> Your name</label>
+                        <input type="text" name="name" id="name" placeholder="Who is contacting me?" required />
+                    </div>
+                    <input type="hidden" name="_subject" value="Someone is getting in touch!">
+                    <div>
+                        <label for="email"> Your E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="To who may I reply?" required />
+                    </div>
+                    <div>
+                        <label for="message"> Your message </label>
+                        <textarea name="message" id="message" rows="5" placeholder="What is your message?"
+                            required></textarea>
+                    </div>
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500#contactMe">
+                </fieldset>
+                <button type="submit" name="send" id="send" value="Send">Send</button>
+                <div id="form-status">
+                    <!-- <img src="images/check.svg" alt="check icon"> -->
+                    <!-- <p>Succes</p> -->
+                </div>
+            </form> <!-- End contact formulier -->
+
+
+        </section>
+
+        <section>
+            <article>
+                <h2>Or stay in touch <span>👉</span></h2>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </article>
+
+        </section>
+    </footer>
 
 
 

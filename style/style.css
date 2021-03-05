@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* FONTS  */
@@ -18,6 +19,7 @@
     --white: #fff;
     --aqua: #0ED2CB;
     --gray: #ebebeb;
+    --darkgray: #575756;
 
     --headtext: 'Manrope', sans-serif;
     --bodytext: 'Quicksand', sans-serif;
@@ -196,19 +198,19 @@ main section:nth-child(even) {
     row-gap: 1rem;
 }
 
-section:nth-child(even) h2 {
+main section:nth-child(even) h2 {
     /* font-size: clamp(2.5rem, 4vw, 6rem); */
     padding: 1rem 0;
     background: coral;
     color: var(--white);
 }
 
-section:nth-child(even)>header {
+main section:nth-child(even)>header {
     grid-column: 1 / -1;
     text-align: center;
 }
 
-section:nth-child(even) article {
+main section:nth-child(even) article {
     height: 15rem;
     background: var(--aqua);
     position: relative;
@@ -217,7 +219,7 @@ section:nth-child(even) article {
     border: 2px solid var(--aqua);
 }
 
-section:nth-child(even) article img {
+main section:nth-child(even) article img {
     position: absolute;
     /* width: 100%; */
     width: 100%;
@@ -228,11 +230,20 @@ section:nth-child(even) article img {
     margin: auto;
 }
 
-section:nth-child(even) article h3 {
+main section:nth-child(even) article h3 {
     padding-bottom: 1.5rem;
     font-size: clamp(1.1rem, 1.5vw, 1.2rem);
-    white-space: nowrap;
+
     /* FIX THIS LINE GOES OVER 2 LINES */
+}
+
+.greenfade {
+    background: var(--white);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .4;
+    transition: all .8s cubic-bezier(.51, -0.51, .77, 1.24);
 }
 
 .project-wrap {
@@ -254,7 +265,7 @@ section:nth-child(even) article h3 {
 }
 
 .projectCard-text {
-    padding: 2rem;
+    padding: 2rem .5rem;
     padding-top: 12.5rem;
     color: black;
     opacity: 1;
@@ -265,27 +276,37 @@ section:nth-child(even) article h3 {
     z-index: 3;
 
     transition: all 0.5s cubic-bezier(.51, -0.51, .77, 1.24);
+    white-space: nowrap;
 }
 
-section:nth-child(even) article:hover .projectCard-text {
+main section:nth-child(even) article:hover .projectCard-text {
     opacity: 1;
     padding-top: 2rem;
     clip-path: inset(0% 0% 0%);
 }
 
-section:nth-child(even) article:hover .projectCard {
+main section:nth-child(even) article:hover .projectCard {
     opacity: .94;
+    clip-path: inset(0% 0% 0%);
+}
+
+main section:nth-child(even) article:hover .greenfade {
+    opacity: 0;
     clip-path: inset(0% 0% 0%);
 }
 
 
 /* SKILLS  */
-section:nth-child(2n+3) {
+main section:nth-child(2n+3) {
     width: 100vw;
     background: var(--gray);
 }
 
-section:nth-child(2n+3)>div {
+main section:last-child {
+    padding-bottom: 2rem;
+}
+
+main section:nth-child(2n+3)>div {
     width: min(70rem, 90%);
     display: flex;
     justify-content: center;
@@ -294,22 +315,21 @@ section:nth-child(2n+3)>div {
     margin: 0 auto;
 }
 
-section:nth-child(2n+3) h2 {
+main section:nth-child(2n+3) h2 {
     text-align: center;
     padding: 2rem 0 0 0;
 }
 
-section:nth-child(2n+3) article {
+main section:nth-child(2n+3) article {
     width: 6rem;
     margin: 1rem;
-    /* background: yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-section:nth-child(2n+3) article div {
+main section:nth-child(2n+3) article div {
     width: 5rem;
     height: 5rem;
     margin: 2rem 0;
@@ -318,15 +338,221 @@ section:nth-child(2n+3) article div {
 }
 
 
+/* FORM  */
+footer>section {
+    width: min(35rem, 90%);
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+form {
+    border: 1px solid white;
+    width: min(35rem, 90%);
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 1.5rem 0 2rem 0;
+    position: relative;
+    border-radius: 1.5rem 1.5rem 0 1.5rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+fieldset>div {
+    width: min(30rem, 90%);
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+button[type=submit] {
+    -webkit-appearance: none;
+    border: none;
+    background: coral;
+    color: var(--white);
+    width: min(15rem, 90%);
+
+    margin: 1rem auto;
+
+    padding: 1rem .5rem;
+    display: block;
+    border-radius: .3rem;
+    box-shadow: 0px 0px 13px -1px #8C8C8C;
+
+}
+
+button[type=submit]:hover {
+    background: var(--white);
+    color: coral;
+}
+
+legend span {
+    display: inline-block;
+    animation: wiggle 3s infinite both;
+    transform-origin: 75% 75%;
+    animation-play-state: paused;
+}
+
+form:hover legend span {
+    animation-play-state: running;
+    /* font-size: 200%; */
+}
+
+
+legend {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 140%;
+    padding: 0;
+    width: 10rem;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: -5%;
+    text-align: center;
+    background: var(--aqua);
+    right: calc(50% - 5rem);
+}
+
+input,
+textarea {
+    border: none;
+    border-bottom: 1px solid var(--white);
+    background: var(--white);
+    padding: .5rem .5rem;
+    border-radius: .3rem;
+    color: var(--darkgray);
+}
+
+input:valid {
+    background-image: url(../images/validation_check.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: center left .5rem;
+    padding: .5rem 2rem;
+}
+
+textarea:valid {
+    background-image: url(../images/validation_check.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: top .5rem left .5rem;
+    padding: .5rem 2rem;
+}
+
+textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+label {
+    /* width: 10rem; */
+    padding-bottom: .7rem;
+    color: var(--white);
+    /* display: inline-block; */
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #8C8C8C;
+    opacity: .5;
+    font-family: var(--bodytext);
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #8C8C8C;
+    opacity: .5;
+    font-family: var(--bodytext);
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #8C8C8C;
+    opacity: .5;
+    font-family: var(--bodytext);
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #8C8C8C;
+    opacity: .5;
+    font-family: var(--bodytext);
+}
+
+form div:last-child {
+    color: white;
+    /* background: yellow; */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form div:last-child img {
+    width: 1rem;
+    margin-right: .5rem;
+}
+
+/* Resource: Check by Arthur Shlain from the Noun Project  */
+
+
 /* FOOTER  */
 footer {
     width: 100vw;
-    height: 100vh;
     background: var(--aqua);
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+    padding-bottom: 4rem;
 }
 
-/* FORM  */
+footer section:nth-child(2) {
+    margin-top: 3rem;
+
+}
+
+footer section:nth-child(2) article {
+    border: 1px solid var(--white);
+    /* height: 20vh; */
+    width: min(30rem, 90%);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 1.5rem 1.5rem 0 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer section:nth-child(2) h2 {
+    font-size: 140%;
+    color: white;
+    text-align: center;
+    background-color: var(--aqua);
+    position: absolute;
+    width: 13rem;
+    top: -10%;
+    left: calc(50% - 6rem);
+
+}
+
+footer section:nth-child(2) article div {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: min(5rem, 10vw);
+    height: min(5rem, 10vw);
+    margin: 2rem 1rem;
+}
+
+
 
 /* ANIMATIONS  */
 @keyframes breathe {
@@ -345,6 +571,27 @@ footer {
         /* font-size: clamp(5rem, 10vw, 15rem); */
     }
 }
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+
+    25% {
+        transform: rotate(.2turn)
+    }
+
+    50% {
+        transform: rotate(-.08turn)
+    }
+
+    75% {
+        transform: rotate(.2turn)
+    }
+}
+
 
 
 
