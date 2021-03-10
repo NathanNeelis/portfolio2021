@@ -20,6 +20,7 @@
     --aqua: #0ED2CB;
     --gray: #ebebeb;
     --darkgray: #575756;
+    --darkmode: #333333;
 
     --headtext: 'Manrope', sans-serif;
     --bodytext: 'Quicksand', sans-serif;
@@ -29,6 +30,7 @@ html {
     font-size: 100%;
     overflow-x: hidden;
     font-family: var(--bodytext);
+    background: var(--white);
 }
 
 body {
@@ -121,6 +123,8 @@ body>header>div>a {
     font-weight: 400;
     /* border: 2px solid coral; */
     box-shadow: 0px 0px 13px -1px #8C8C8C;
+
+    transition: all .5s ease;
 }
 
 body>header>div>a:hover {
@@ -211,7 +215,7 @@ main section:nth-child(even)>header {
 }
 
 main section:nth-child(even) article {
-    height: 15rem;
+    height: 18rem;
     background: var(--aqua);
     position: relative;
     z-index: 0;
@@ -241,14 +245,15 @@ main section:nth-child(even) article h3 {
     /* FIX THIS LINE GOES OVER 2 LINES */
 }
 
-.greenfade {
-    background: var(--white);
+/* Fade over project cards YES OR NO?  */
+/* .greenfade {
+    background: var(--aqua);
     width: 100%;
     height: 100%;
     position: absolute;
     opacity: .4;
     transition: all .8s cubic-bezier(.51, -0.51, .77, 1.24);
-}
+} */
 
 .project-wrap {
     background: coral;
@@ -258,7 +263,7 @@ main section:nth-child(even) article h3 {
 
 .projectCard {
     position: absolute;
-    width: 100%;
+    width: 102%;
     height: 100%;
     background: white;
     color: black;
@@ -270,7 +275,7 @@ main section:nth-child(even) article h3 {
 
 .projectCard-text {
     padding: 2rem 0rem 2rem 1rem;
-    padding-top: 12.5rem;
+    padding-top: 15.5rem;
     color: black;
     opacity: 1;
     width: 100%;
@@ -302,6 +307,25 @@ main section:nth-child(even) article:hover .greenfade {
     opacity: 0;
     clip-path: inset(0% 0% 0%);
 }
+
+/* PROJECT CHIPS  */
+.codeVariatons {
+    margin: .5rem 0;
+    width: 100%;
+
+}
+
+.htmlChip,
+.cssChip,
+.jsChip {
+    display: inline-block;
+    background: #ccc;
+    padding: .2rem .6rem;
+    margin-top: .5rem;
+    border-radius: .3rem;
+    font-size: 80%;
+}
+
 
 
 /* SKILLS  */
@@ -395,6 +419,8 @@ button[type=submit] {
     border-radius: .3rem;
     box-shadow: 0px 0px 13px -1px #8C8C8C;
 
+    transition: all .5s ease;
+
 }
 
 button[type=submit]:hover {
@@ -432,6 +458,7 @@ legend {
 input,
 textarea {
     border: none;
+    height: 2.5rem;
     border-bottom: 1px solid var(--white);
     background: var(--white);
     padding: .5rem .5rem;
@@ -542,7 +569,6 @@ footer section:nth-child(2) {
 
 footer section:nth-child(2) article {
     border: 1px solid var(--white);
-    /* height: 20vh; */
     width: min(30rem, 90%);
     margin: 0 auto;
     position: relative;
@@ -567,11 +593,19 @@ footer section:nth-child(2) h2 {
 }
 
 footer section:nth-child(2) article div {
-    border: 1px solid white;
     border-radius: 50%;
-    width: min(5rem, 10vw);
-    height: min(5rem, 10vw);
+    width: min(2.5rem, 10vw);
+    height: min(2.5rem, 10vw);
     margin: 2rem 1rem;
+}
+
+footer section:nth-child(2) article div svg {
+    fill: var(--white);
+    transition: fill .5s ease;
+}
+
+footer section:nth-child(2) article div:hover svg {
+    fill: coral;
 }
 
 
@@ -635,4 +669,8 @@ footer section:nth-child(2) article div {
 
 
 /* DARK MODE  */
-@media screen and (prefers-color-scheme: dark) {}
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        background: var(--darkmode);
+    }
+}
