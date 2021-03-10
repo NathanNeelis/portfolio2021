@@ -21,6 +21,7 @@
     --gray: #ebebeb;
     --darkgray: #575756;
     --darkmode: #333333;
+    --coral: coral;
 
     --headtext: 'Manrope', sans-serif;
     --bodytext: 'Quicksand', sans-serif;
@@ -115,13 +116,13 @@ body>header>div>a {
     text-decoration: none;
     color: var(--white);
     margin: 3rem 0 0 0;
-    background: coral;
+    background: var(--coral);
     padding: 1rem 2rem;
     border-radius: .3rem;
     z-index: 3;
     font-family: var(--bodytext);
     font-weight: 400;
-    /* border: 2px solid coral; */
+    /* border: 2px solid var(--coral); */
     box-shadow: 0px 0px 13px -1px #8C8C8C;
 
     transition: all .5s ease;
@@ -129,8 +130,8 @@ body>header>div>a {
 
 body>header>div>a:hover {
     background: var(--white);
-    color: coral;
-    /* border: 2px solid coral; */
+    color: var(--coral);
+    /* border: 2px solid var(--coral); */
 }
 
 
@@ -175,7 +176,7 @@ main section:first-child article:nth-child(2) {
     height: 23rem;
     width: 23rem;
     border-radius: 50% 50% 0% 40% / 50% 50% 0% 50%;
-    background: coral;
+    background: var(--coral);
     display: flex;
     align-items: center;
     padding: 0 2rem;
@@ -205,7 +206,7 @@ main section:nth-child(even) {
 main section:nth-child(even) h2 {
     /* font-size: clamp(2.5rem, 4vw, 6rem); */
     padding: 1rem 0;
-    background: coral;
+    background: var(--coral);
     color: var(--white);
 }
 
@@ -256,7 +257,7 @@ main section:nth-child(even) article h3 {
 } */
 
 .project-wrap {
-    background: coral;
+    background: var(--coral);
     padding: 2rem;
     position: absolute;
 }
@@ -337,19 +338,19 @@ main section:nth-child(even) article:hover .greenfade {
 .readMoreButton {
     padding: .3rem 1rem;
     margin-top: .5rem auto;
-    background: coral;
+    background: var(--coral);
     border-radius: .5rem;
     text-decoration: none;
     color: white;
     transition: all .5s ease;
-    border: 1px solid coral;
+    border: 1px solid var(--coral);
     box-shadow: 0px 0px 13px -1px #8C8C8C;
     /* font-size: 80%; */
 }
 
 .readMoreButton:hover {
-    background: white;
-    color: coral;
+    background: var(--white);
+    color: var(--coral);
     transition: all .5s ease;
 
 }
@@ -391,15 +392,16 @@ main section:nth-child(2n+3) article div {
     width: 5rem;
     height: 5rem;
     margin: 2rem 0 1rem 0;
-    /* border: 2px solid coral; */
+    /* border: 2px solid var(--coral); */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: coral;
+    background: var(--coral);
     color: white;
     font-size: 180%;
 }
+
 
 main section:nth-child(2n+3) article:first-child div {
     letter-spacing: -.15rem;
@@ -455,7 +457,7 @@ fieldset>div {
 button[type=submit] {
     -webkit-appearance: none;
     border: none;
-    background: coral;
+    background: var(--coral);
     color: var(--white);
     width: min(15rem, 90%);
 
@@ -472,7 +474,7 @@ button[type=submit] {
 
 button[type=submit]:hover {
     background: var(--white);
-    color: coral;
+    color: var(--coral);
 }
 
 legend span {
@@ -652,7 +654,7 @@ footer section:nth-child(2) article div svg {
 }
 
 footer section:nth-child(2) article div:hover svg {
-    fill: coral;
+    fill: var(--coral);
 }
 
 

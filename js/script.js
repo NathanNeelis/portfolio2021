@@ -6,16 +6,16 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
 
-    var form = document.getElementById("my-form");
+    const form = document.getElementById("my-form");
     // var button = document.getElementById("my-form-button");
-    var status = document.getElementById("form-status");
+    const status = document.getElementById("form-status");
 
     // Success and Error functions for after the form is submitted
 
     function success() {
         const storage = window.localStorage;
-        let nameContact = document.getElementById('name').value;
-        let emailContact = document.getElementById('email').value;
+        const nameContact = document.getElementById('name').value;
+        const emailContact = document.getElementById('email').value;
         storage.setItem('name', nameContact);
         storage.setItem('mail', emailContact);
 
@@ -23,11 +23,11 @@ window.addEventListener("DOMContentLoaded", function () {
         setContactForm();
         status.innerHTML = "";
         // Create IMG element
-        let succesIcon = document.createElement('img');
+        const succesIcon = document.createElement('img');
         succesIcon.src = 'images/check.svg'
 
         // Create P element
-        let succesText = document.createElement('p'); // creates a paragraph element
+        const succesText = document.createElement('p'); // creates a paragraph element
         succesText.innerHTML = 'Thanks ' + nameContact + '! Your message has been send.'; // adds the movie titles to paragraph elements
 
         status.appendChild(succesIcon);
@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var data = new FormData(form);
+        const data = new FormData(form);
         ajax(form.method, form.action, data, success, error);
     });
 });
@@ -86,7 +86,7 @@ function setContactForm() {
 // change adobe images
 const image = document.querySelector('.adobeIcon');
 let currentPos = 0;
-var images = ['ps.svg', 'id.svg', 'ai.svg', 'xd.svg']
+const images = ['ps.svg', 'id.svg', 'ai.svg', 'xd.svg']
 
 function nextImage() {
     if (++currentPos >= images.length)
