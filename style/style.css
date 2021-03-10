@@ -235,7 +235,7 @@ main section:nth-child(even) article img {
 }
 
 main section:nth-child(even) article h3 {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     font-size: clamp(1.1rem, 1.5vw, 1.2rem);
     /* white-space: nowrap; */
     white-space: nowrap;
@@ -263,7 +263,7 @@ main section:nth-child(even) article h3 {
 
 .projectCard {
     position: absolute;
-    width: 102%;
+    width: 100%;
     height: 100%;
     background: white;
     color: black;
@@ -290,6 +290,8 @@ main section:nth-child(even) article h3 {
 .projectCard-text p {
     /* padding-left: .5rem; */
     padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
 }
 
 main section:nth-child(even) article:hover .projectCard-text {
@@ -309,24 +311,48 @@ main section:nth-child(even) article:hover .greenfade {
 }
 
 /* PROJECT CHIPS  */
-.codeVariatons {
+.codeVariations {
     margin: .5rem 0;
-    width: 100%;
-
+    width: 90%;
 }
 
 .htmlChip,
 .cssChip,
-.jsChip {
+.jsChip,
+.uxChip,
+.vidChip {
     display: inline-block;
     background: #ccc;
     padding: .2rem .6rem;
-    margin-top: .5rem;
+    margin-top: .3rem;
     border-radius: .3rem;
     font-size: 80%;
 }
 
+.redirectWrap {
+    display: flex;
+    justify-content: flex-start;
+}
 
+.readMoreButton {
+    padding: .3rem 1rem;
+    margin-top: .5rem auto;
+    background: coral;
+    border-radius: .5rem;
+    text-decoration: none;
+    color: white;
+    transition: all .5s ease;
+    border: 1px solid coral;
+    box-shadow: 0px 0px 13px -1px #8C8C8C;
+    /* font-size: 80%; */
+}
+
+.readMoreButton:hover {
+    background: white;
+    color: coral;
+    transition: all .5s ease;
+
+}
 
 /* SKILLS  */
 main section:nth-child(2n+3) {
@@ -364,9 +390,30 @@ main section:nth-child(2n+3) article {
 main section:nth-child(2n+3) article div {
     width: 5rem;
     height: 5rem;
-    margin: 2rem 0;
-    border: 2px solid coral;
+    margin: 2rem 0 1rem 0;
+    /* border: 2px solid coral; */
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: coral;
+    color: white;
+    font-size: 180%;
+}
+
+main section:nth-child(2n+3) article:first-child div {
+    letter-spacing: -.15rem;
+}
+
+.textIcon {
+    padding-bottom: .2rem;
+}
+
+main section:nth-child(2n+3) article div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
 }
 
 

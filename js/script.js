@@ -80,3 +80,19 @@ function setContactForm() {
     nameContact.value = storageValueName;
     emailContact.value = storageValueMail;
 }
+
+
+
+// change adobe images
+const image = document.querySelector('.adobeIcon');
+let currentPos = 0;
+var images = ['ps.svg', 'id.svg', 'ai.svg', 'xd.svg']
+
+function nextImage() {
+    if (++currentPos >= images.length)
+        currentPos = 0;
+
+    image.src = 'images/icons/' + images[currentPos];
+}
+
+setInterval(nextImage, 3000);
