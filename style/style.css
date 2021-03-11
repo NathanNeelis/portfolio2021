@@ -524,12 +524,40 @@ input:valid {
     padding: .5rem 2rem;
 }
 
-textarea:valid {
+input:invalid {
+    background-image: url(../images/validation_cross.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: center left .5rem;
+    padding: .5rem 2rem;
+}
+
+input:placeholder-shown {
+    background-image: none;
+    padding: .5rem .5rem;
+}
+
+input:required,
+textarea:required {
+    box-shadow: none;
+}
+
+textarea:valid,
+textarea:invalid {
     background-image: url(../images/validation_check.svg);
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: top .5rem left .5rem;
     padding: .5rem 2rem;
+}
+
+textarea:invalid {
+    background-image: url(../images/validation_cross.svg);
+}
+
+textarea:placeholder-shown {
+    background-image: none;
+    padding: .5rem .5rem;
 }
 
 textarea {
@@ -544,33 +572,42 @@ label {
     /* display: inline-block; */
 }
 
-::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #8C8C8C;
     opacity: .5;
     font-family: var(--bodytext);
 }
 
-::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
     /* Firefox 19+ */
+    font-size: .75rem;
     color: #8C8C8C;
     opacity: .5;
     font-family: var(--bodytext);
 }
 
-:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
     /* IE 10+ */
     color: #8C8C8C;
     opacity: .5;
     font-family: var(--bodytext);
 }
 
-:-moz-placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder {
     /* Firefox 18- */
+    font-size: .75rem;
     color: #8C8C8C;
     opacity: .5;
     font-family: var(--bodytext);
 }
+
+
+
 
 form div:last-child {
     color: white;
@@ -717,9 +754,24 @@ footer section:nth-child(2) article div:hover svg {
 
 
 
+
 /* DARK MODE  */
 @media screen and (prefers-color-scheme: dark) {
     html {
         background: var(--darkmode);
+    }
+}
+
+
+/* High Contrast mode  */
+@media screen and (-ms-high-contrast: active) {
+    html {
+        background: var(--darkmode);
+    }
+}
+
+@media (inverted-colors: inverted) {
+    html {
+        background: yellow;
     }
 }
