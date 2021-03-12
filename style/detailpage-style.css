@@ -120,7 +120,6 @@ nav a {
 }
 
 nav>ul>li {
-    width: 100%;
     margin: 1rem 0 0 0;
     padding: 1rem 0 0 0;
     font-weight: 800;
@@ -131,6 +130,16 @@ nav>ul>li {
 nav>ul>li:first-child {
     margin: 5rem 0 0 0;
 }
+
+nav>ul>li:nth-child(4) a {
+    background: var(--coral);
+    border-radius: .3rem;
+    padding: .5rem .75rem;
+    align-items: baseline;
+    font-weight: 400;
+    font-size: 90%;
+}
+
 
 
 /* SUB NAVIGATION   */
@@ -174,17 +183,91 @@ main>section>header {
 
     nav {
         margin: 0;
-        position: initial;
+        position: relative;
         width: 100vw;
-        background: var(--aqua);
-        /* box-shadow: 0px 12px 10px -7px #8C8C8C; */
         box-shadow: none;
     }
 
     nav>ul:first-child {
+        display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        width: min(60rem, 90%);
+        background: var(--aqua);
+        padding-bottom: 0;
+        transition: all .5s ease;
     }
+
+    nav>ul>li {
+        margin: 0;
+        padding: 1rem 1rem;
+        font-size: 100%;
+        position: relative;
+        z-index: 3;
+    }
+
+
+    nav>ul>li:first-child {
+        margin: 0;
+    }
+
+    li>ul.drop-menu {
+        position: absolute;
+        width: 100%;
+        padding: 0 1rem;
+        z-index: -1;
+        top: -25rem;
+        left: 0;
+        background: var(--aqua);
+        border-radius: 0 0 .5rem .5rem;
+        list-style: none;
+    }
+
+
+    li:nth-child(3)>ul {
+        width: 120%;
+    }
+
+    ul.drop-menu li {
+        padding: .75rem 0 .25rem 0rem;
+    }
+
+    ul.drop-menu li:last-child {
+        margin-bottom: 2rem;
+    }
+
+    ul.drop-menu li a {
+        font-size: 100%;
+    }
+
+    ul.drop-menu li {
+        border-bottom: 1px solid var(--aqua);
+        transition: all .25s ease;
+    }
+
+
+    /* HOVER  */
+    li:hover>ul.drop-menu {
+        top: 3rem;
+    }
+
+    ul.drop-menu li:hover {
+        border-bottom: 1px solid var(--coral);
+        transition: all .25s ease;
+    }
+
+    nav>ul>li ul>li:first-child {
+        margin-top: 1.5rem;
+        padding-top: .5rem;
+    }
+
+    /* contact button hover  */
+    nav>ul>li:nth-child(4) a:hover {
+        background: white;
+        color: var(--coral);
+    }
+
 
 
 }
