@@ -764,7 +764,7 @@ footer section:nth-child(2) article div:hover svg {
 
 
 /* High Contrast mode  */
-@media screen and (-ms-high-contrast: active) {
+@media screen and (high-contrast: active) {
     html {
         background: var(--darkmode);
     }

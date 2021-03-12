@@ -138,6 +138,7 @@ nav>ul>li:nth-child(4) a {
     align-items: baseline;
     font-weight: 400;
     font-size: 90%;
+    transition: all .5s ease;
 }
 
 
@@ -251,6 +252,20 @@ main>section>header {
     li:hover>ul.drop-menu {
         top: 3rem;
     }
+
+    nav a:focus {
+        border-bottom: 1px solid var(--coral);
+        outline: none;
+    }
+
+    header nav>ul li:focus-within a+ul {
+        top: 3rem;
+    }
+
+    nav>ul>li:nth-child(4) a:focus {
+        outline: initial;
+    }
+
 
     ul.drop-menu li:hover {
         border-bottom: 1px solid var(--coral);
