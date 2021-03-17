@@ -16,7 +16,7 @@
     --gray: #ebebeb;
     --darkgray: #575756;
     --darkmode: #333333;
-    --coral: coral;
+    --coral: #f75e25;
 
     --headtext: 'Manrope', sans-serif;
     --bodytext: 'Quicksand', sans-serif;
@@ -29,14 +29,7 @@ html {
     background: var(--white);
 }
 
-main>section {
-    width: min(60rem, 90%);
-    margin: 0 auto;
-}
 
-img {
-    width: 100%;
-}
 
 /* STICKY MENU  */
 
@@ -45,7 +38,7 @@ body>section {
     text-align: center;
     color: var(--white);
     width: 100vw;
-    background: coral;
+    background: var(--aqua);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -62,37 +55,18 @@ body>section>img {
 }
 
 
-
-/* cross before  */
-/* nav>h2::before {
-    content: " ";
-    width: 2.5rem;
-    height: 2.5rem;
-    background-image: url(../images/menu_cross.svg);
-    position: absolute;
-    top: calc(50% - 1.25rem);
-    left: 5%;
-
-} */
-
-
 /* NAVIGATION   */
 
-main>section>header {
-    background: var(--aqua);
-    padding: 1rem;
-}
-
 body>header {
-    /* background: var(--aqua); */
+    background: var(--aqua);
 }
 
 nav {
-    position: absolute;
+    position: fixed;
+    overflow-y: scroll;
     width: 100vw;
-    top: 0;
-    /* height: 120vh; */
-    margin-top: -200vh;
+    height: 100vh;
+    margin-left: -100vw;
     background: var(--aqua);
     /* transition: margin .5s cubic-bezier(.38, -0.14, .76, 1.25); */
     transition: margin .75s cubic-bezier(.69, -0.69, .48, 1.63);
@@ -100,7 +74,7 @@ nav {
 }
 
 .showMenu {
-    margin-top: 0;
+    margin-left: 0;
     transition: margin .6s cubic-bezier(.69, -0.69, .48, 1.63);
 }
 
@@ -124,11 +98,11 @@ nav>ul>li {
     padding: 1rem 0 0 0;
     font-weight: 800;
     color: var(--white);
-    font-size: 120%;
+    font-size: 100%;
 }
 
 nav>ul>li:first-child {
-    margin: 5rem 0 0 0;
+    /* margin: 5rem 0 0 0; */
 }
 
 nav>ul>li:nth-child(4) a {
@@ -141,14 +115,44 @@ nav>ul>li:nth-child(4) a {
     transition: all .5s ease;
 }
 
+.triangle,
+.triangleUX {
+    display: inline-block;
+    margin-left: .5rem;
+    align-items: center;
+    width: 0;
+    height: 0;
+    border-left: .4rem solid transparent;
+    border-right: .4rem solid transparent;
+    border-bottom: .6rem solid var(--white);
+    transform-origin: center;
+    transform: rotate(.5turn);
+    transition: transform .75s ease;
+}
 
+.turn.triangle,
+.turn.triangleUX {
+    transform: rotate(0turn);
+}
 
 /* SUB NAVIGATION   */
+nav>ul>li ul {
+    position: absolute;
+    left: -100vw;
+    opacity: 0;
+    transition: all .75s ease;
+}
+
+.active {
+    position: initial;
+    opacity: 1;
+}
 
 nav>ul>li ul>li {
     font-weight: 300;
-    padding: .5rem 0 .5rem 1rem;
+    padding: .5rem 0 0 1rem;
     list-style: none;
+
 }
 
 nav>ul>li ul>li:first-child {
@@ -163,11 +167,61 @@ main>section>header {
     margin: 2rem 0;
 }
 
+main section header h1 {
+    font-size: 1.7em;
+    color: var(--aqua);
+    text-align: center;
+}
+
+/* CONTENT  */
+section {
+    width: min(60rem, 90%);
+    margin: 0 auto;
+}
+
+section article img,
+section>header img {
+    width: 100%;
+}
+
+article h2 {
+    margin-top: 4rem;
+    margin-bottom: .5rem;
+    color: var(--darkmode);
+    font-size: 1.4em;
+}
+
+article h3 {
+    font-size: 1.15em;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
 
 
+article {
+    margin: 1rem 0;
+}
 
+article p {
+    margin-bottom: 1rem;
+}
 
+.ofjSection {
+    width: 100%;
+}
 
+.ofjSection h2 {
+    background: var(--coral);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 5rem;
+}
+
+.ofjSection article {
+    width: min(60rem, 90%);
+    margin: 0 auto;
+}
 
 /* MEDIA QUERIES  */
 
@@ -208,7 +262,6 @@ main>section>header {
         z-index: 3;
     }
 
-
     nav>ul>li:first-child {
         margin: 0;
     }
@@ -218,11 +271,12 @@ main>section>header {
         width: 100%;
         padding: 0 1rem;
         z-index: -1;
-        top: -25rem;
         left: 0;
         background: var(--aqua);
         border-radius: 0 0 .5rem .5rem;
         list-style: none;
+        opacity: 0;
+        transition: all .5s ease;
     }
 
 
@@ -250,7 +304,7 @@ main>section>header {
 
     /* HOVER  */
     li:hover>ul.drop-menu {
-        top: 3rem;
+        opacity: 1;
     }
 
     nav a:focus {
@@ -259,11 +313,12 @@ main>section>header {
     }
 
     header nav>ul li:focus-within a+ul {
-        top: 3rem;
+        opacity: 1;
     }
 
+    /* FOCUS CONTACT BUTTON NAV -- DOESNT WORK YET  */
     nav>ul>li:nth-child(4) a:focus {
-        outline: initial;
+        outline: dashed 2px var(--coral);
     }
 
 

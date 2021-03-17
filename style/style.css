@@ -18,10 +18,12 @@
 :root {
     --white: #fff;
     --aqua: #0ED2CB;
+    /* --indigo: #5a6ebe; */
     --gray: #ebebeb;
     --darkgray: #575756;
     --darkmode: #333333;
-    --coral: coral;
+    /* --coral: #f53604; */
+    --coral: #f75e25;
 
     --headtext: 'Manrope', sans-serif;
     --bodytext: 'Quicksand', sans-serif;
@@ -490,7 +492,7 @@ form:hover legend span {
 
 
 legend {
-    color: var(--white);
+    color: var(--darkmode);
     font-weight: 500;
     font-size: 140%;
     padding: 0;
@@ -568,7 +570,7 @@ textarea {
 label {
     /* width: 10rem; */
     padding-bottom: .7rem;
-    color: var(--white);
+    color: var(--darkmode);
     /* display: inline-block; */
 }
 
@@ -610,7 +612,7 @@ textarea:-moz-placeholder {
 
 
 form div:last-child {
-    color: white;
+    /* color: var(darkmode); */
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -668,7 +670,7 @@ footer section:nth-child(2) article {
 
 footer section:nth-child(2) h2 {
     font-size: 140%;
-    color: white;
+    color: var(--darkmode);
     text-align: center;
     background-color: var(--aqua);
     position: absolute;

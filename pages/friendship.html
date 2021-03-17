@@ -32,9 +32,9 @@
                 <li><a href="../index.html">
                         Home
                     </a></li>
-                <li>
-                    <a href="">Projects web development</a>
-                    <ul class="drop-menu">
+                <li id="projectWeb">
+                    Projects web development<div class=triangle></div>
+                    <ul class="drop-menu" id="menuProjectWeb">
                         <li>
                             <a href="">Movies web app</a>
                         </li>
@@ -59,9 +59,9 @@
 
                     </ul>
                 </li>
-                <li>
-                    <a href="">Projects ux / ui </a>
-                    <ul class="drop-menu">
+                <li id="projectUX">
+                    Projects ux / ui <div class=triangleUX></div>
+                    <ul class="drop-menu" id="menuProjectUX">
                         <li>
                             <a href="">Maas coffee machines</a>
                         </li>
@@ -84,8 +84,8 @@
                 </li>
                 <li><a href="../index.html#contactMe">
                         Contact
-                    </a></li>
-                <li>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -95,11 +95,11 @@
             <header>
                 <img src="https://raw.githubusercontent.com/NathanNeelis/Project-Tech/master/Styleguide/guide/Friendship_logo-full-RGB_2.jpg"
                     alt="hero image">
-                <h2>Project: <span>Friendship</span></h2>
+                <h1>Project: <span>Friendship</span></h1>
             </header>
 
-            <article>
-                <h3>Description</h3>
+            <article class="description">
+                <h2>Description</h2>
                 <p>Friendship is a dating service, not meant for romantic relationships but for friendships. Do you
                     feel
                     alone sometimes and would you like to get in touch with people that have the same interests as
@@ -118,8 +118,8 @@
             </article>
 
             <article>
-                <h3>Job story</h3>
-                <h5>Filtering</h5>
+                <h2>Job story</h2>
+                <h3>Filtering</h3>
                 <p> When I'm bored at home, at the beginning of the evening, watching cooking shows on Netflix,
                     while
                     I'm already done with all my homework
@@ -128,7 +128,7 @@
                 </p>
 
 
-                <h5>Login / register</h5>
+                <h3>Login / register</h3>
                 <p> When I am sitting at home all alone, I want to be able to create an account with ease at a
                     dating
                     website to be able to match with other people and finally find someone So I won't feel alone
@@ -136,7 +136,7 @@
                     effort
                     as possible
                 </p>
-                <h5>Matching</h5>
+                <h3>Matching</h3>
                 <p>
                     When I am at home in the evening with my laptop on the couch and see a profile of a person that
                     I
@@ -146,7 +146,7 @@
             </article>
 
             <article>
-                <h3>Status</h3>
+                <h2>Status</h2>
                 <p>We finished our school project, but we want te keep on working on this application.
                     To see what we already finished and what we are still planning, please visit our <a
                         href="https://github.com/BVictorB/friendship/projects/1"> task panel on GitHub.</a>
@@ -157,12 +157,11 @@
 
 
         <section class="ofjSection">
+            <h2>The application</h2>
             <article>
-                <figure class="">
-                    <img src="images/friendship/Friendship_logo2.svg" alt="Logo Friendshp">
-                </figure>
-                <h3>The application</h3>
-                <h5>Homepage</h5>
+                <!-- <img src="../images/friendship/Friendship_logo2.svg" alt="Logo Friendshp"> -->
+
+                <h3>Homepage</h3>
                 <p>On the homepage, you see some other users that you might like.
                     Depending on the weather there is a suggestion section that suggests finding people to sport
                     with if
@@ -171,107 +170,87 @@
                     checking the location of the registered user and referring it to the weather in his town via an
                     API.
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85339556-b0349280-b4e4-11ea-94ff-fb3bf57bc8fe.jpg"
-                        alt="Homepage Friendship">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85339556-b0349280-b4e4-11ea-94ff-fb3bf57bc8fe.jpg"
+                    alt="Homepage Friendship">
 
 
-                <h5>Log in</h5>
+                <h3>Log in</h3>
                 <p>If you want to use our application, you have to log in! This can be done via the login form. It
                     checks the email and the hashed password with the database. If it matches the user gets logged
                     in,
                     if not, then he might need to create an account.
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85339565-b4f94680-b4e4-11ea-843e-9d538ceafa91.jpg"
-                        alt="Log in Friendship">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85339565-b4f94680-b4e4-11ea-843e-9d538ceafa91.jpg"
+                    alt="Log in Friendship">
 
 
 
-                <h5>Register</h5>
+                <h3>Register</h3>
                 <p>If the new user doesn't have an account yet, he can register via our registration form. Fill in
                     your
                     personal details, email, and your password to create an account. Don't forget to fill in your
                     interests, because that is what lets other users find you!
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85339582-bb87be00-b4e4-11ea-8786-6f711d1273f2.jpg"
-                        alt="Register Friendship">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85339582-bb87be00-b4e4-11ea-8786-6f711d1273f2.jpg"
+                    alt="Register Friendship">
 
 
-                <h5>Search for other people</h5>
+                <h3>Search for other people</h3>
                 <p>If you want to find other users by their interest you can type in the activity you would like to
                     find
                     someone for on the search page. Our search engine will show you the results of matching profiles
                     for
                     your choosing activity.
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85339583-bc205480-b4e4-11ea-9972-c38366310636.jpg"
-                        alt="Search and filter page">
-                </figure>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85385989-49929180-b543-11ea-9183-5b2f1242e7ca.gif"
-                        alt="search and filter gif">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85339583-bc205480-b4e4-11ea-9972-c38366310636.jpg"
+                    alt="Search and filter page">
+                <img src="https://user-images.githubusercontent.com/55492381/85385989-49929180-b543-11ea-9183-5b2f1242e7ca.gif"
+                    alt="search and filter gif">
 
-                <h5>Like someone</h5>
+                <h3>Like someone</h3>
                 <p>If you found someone that you would like to befriend, meet, or participate with for an activity
                     you
                     can like that user. Simply by going to their profile and hitting the like button!
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85375874-38dc1e80-b537-11ea-8703-0fa0fbddb67c.jpg"
-                        alt="User profile with liking button">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85375874-38dc1e80-b537-11ea-8703-0fa0fbddb67c.jpg"
+                    alt="User profile with liking button">
 
-                <h5>It's a match!</h5>
+                <h3>It's a match!</h3>
                 <p>When you both have liked each other then you have been matched. Your profiles will show up on
                     both of
                     your matches pages and when you go to the profile there is an option to get in contact.
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85339578-b9bdfa80-b4e4-11ea-855b-234331be47eb.jpg"
-                        alt="Your matches">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85339578-b9bdfa80-b4e4-11ea-855b-234331be47eb.jpg"
+                    alt="Your matches">
 
-                <h5>Your profile</h5>
+                <h3>Your profile</h3>
                 <p>If you want to check out your own details, you can check out your profile page. Here you also
                     have
                     the ability to change the details and add or remove one or more of your interests.
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85339581-baef2780-b4e4-11ea-970d-b249061a26c5.jpg"
-                        alt="Your matches">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85339581-baef2780-b4e4-11ea-970d-b249061a26c5.jpg"
+                    alt="Your matches">
             </article>
         </section>
 
         <section class="specificProjects">
             <article>
 
-                <h3>API</h3>
+                <h2>API</h2>
                 <p>On our homepage there is also a suggestion section on what kind of people to find. I made this
                     section using a weather API.
                     if the weather is nice, it offers people to match that like doing sports. If the weather is not
                     so
                     good, it offers people that like playing games.
                 </p>
-                <figure>
-                    <img src="https://user-images.githubusercontent.com/55492381/85388820-db4fce00-b546-11ea-8b79-83d325585ab8.png"
-                        alt="Api based section">
-                </figure>
+                <img src="https://user-images.githubusercontent.com/55492381/85388820-db4fce00-b546-11ea-8b79-83d325585ab8.png"
+                    alt="Api based section">
             </article>
-
-
         </section>
 
         <section class="specificProjects">
             <article>
-                <h3>Deployment</h3>
+                <h2>Deployment</h2>
                 <p>To finish this project, the application has to go live. But since there is a lot of backend
                     Javascripting involved you can't just copy it on to a server. You need to rent a server and
                     install
@@ -291,7 +270,7 @@
             </article>
 
             <article>
-                <h3>Github</h3>
+                <h2>Github</h2>
                 <p>Want to see our source code? Or our research and documentation? Please visit our Github
                     repository.
                 </p>
