@@ -41,11 +41,13 @@ const triangleUX = document.querySelector('.triangleUX');
 projectsUX.addEventListener('click', subMenuUXToggle);
 
 function subMenuWebToggle() {
+    event.preventDefault();
     menuProjectsWeb.classList.toggle('active');
     triangleWeb.classList.toggle('turn');
 }
 
 function subMenuUXToggle() {
+    event.preventDefault();
     menuProjectsUX.classList.toggle('active');
     triangleUX.classList.toggle('turn');
 }
