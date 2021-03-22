@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS  -->
+    <base href="/">
+    <link rel="stylesheet" href="style/detailpage-style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Web details  -->
+    <title>Nathan Neelis</title>
+
+    <!-- SCRIPTS  -->
+    <script src="/js/script-detailpage.js" defer></script>
+</head>
+
+<body>
+    <section id="stickyMenu">
+        <img src="../images/hamburger.svg" alt="icon for opening" class="menuIcon">
+        <h2>menu</h2>
+    </section>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">
+                        Home
+                    </a></li>
+                <li id="projectWebWrap">
+                    <a href="" id="projectWeb" class="hoverMe">Projects web development</a>
+                    <div class=triangle></div>
+                    <ul class="drop-menu" id="menuProjectWeb">
+                        <li>
+                            <a href="../pages/wafs.html">Movies web app</a>
+                        </li>
+                        <li>
+                            <a href="../pages/menucard.html">Menu card Zen garden</a>
+                        </li>
+                        <li>
+                            <a href="../pages/corona.html">Corona during a study</a>
+                        </li>
+                        <li>
+                            <a href="../pages/leaveyourcar.html">Leave your car</a>
+                        </li>
+                        <li>
+                            <a href="../pages/friendship.html">Friendship<a>
+                        </li>
+                        <li>
+                            <a href="../pages/foodtrucks.html">Foodtrucks</a>
+                        </li>
+                        <li>
+                            <a href="../pages/storiegrafie.html">Storygrafie</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="projectUXWrap">
+                    <a href="" id="projectUX">Projects ux / ui </a>
+                    <div class=triangleUX></div>
+                    <ul class="drop-menu" id="menuProjectUX">
+                        <li>
+                            <a href="">Maas coffee machines</a>
+                        </li>
+                        <li>
+                            <a href="">Workspace</a>
+                        </li>
+                        <li>
+                            <a href="">Buddify</a>
+                        </li>
+                        <li>
+                            <a href="">FitFood</a>
+                        </li>
+                        <li>
+                            <a href="">ISGA</a>
+                        </li>
+                        <li>
+                            <a href="">Outdoor for you</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#contactMe">
+                        Contact
+                    </a></li>
+                <li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <img src="https://user-images.githubusercontent.com/55492381/112059309-fa25d400-8b5b-11eb-9cd1-9a43ce04d4d0.png"
+                    alt="hero image">
+                <h1>Project: <span>Menu card zen garden</span></h1>
+            </header>
+
+            <article>
+                <h2>Assignment</h2>
+                <p>The goal of this project is to dive into CSS. The assignment was to style the HTML of a menu card,
+                    like a zen garden type of assignment. I had to choose between requirements and choose for “a
+                    responsive layout without media queries” and “Completely accessible according to the AAA WCAG
+                    terms”.
+                </p>
+            </article>
+
+            <article class="description">
+                <h2>Description</h2>
+                <p>I used CSS for a few years already, but I never knew that you could so much with it. Apparently, the
+                    last few years have been booming for the progress of CSS. In this project I discovered a variety of
+                    new CSS techniques which will change the way I style my digital components forever.
+                </p>
+            </article>
+
+            <article class="highlightArticle">
+                <h2>Highlights</h2>
+                <h3>Accessibility</h3>
+                <p>First off, I learned about the skip to content button. In this menu I applied a skip to desserts
+                    button. Secondly, I added links to the headings. This way you can tab through the menu cards dishes.
+                    The elements change on tabbing because I used the focus-within pseudo class. To emphasize where you
+                    are on the page, I used a highlighted colour that I use for every accessibility part.
+                </p>
+                <img src="https://user-images.githubusercontent.com/55492381/109667996-01674c80-7b71-11eb-9f5c-ff4d6cd75b36.gif"
+                    alt="Accessibility display with skip to sweets button and focus styles">
+
+
+                <h3>Animation</h3>
+                <p>When you click on the clip from the clipboard the menu falls off. When you wait a while, a waiter
+                    will come and ask you if you would like a new menu. If you do, he will run off and get you a new
+                    one.
+                </p>
+                <img src="https://user-images.githubusercontent.com/55492381/109667973-fc0a0200-7b70-11eb-8780-e28bfd4651a8.gif"
+                    alt="Loosing the menu card, waiter appears to ask if you want a new menu">
+
+                <h3>Clamp()</h3>
+                <p>Using clamp was totally new for me. And WOW!.. What an amazing technique. In my menu card I used this
+                    technique for the font-size. Setting a minimum optimal and maximum font-size all in one go.
+                </p>
+
+                <h3>Calc()</h3>
+                <p>Using Calc was also new for me, just like clamp, I didn’t even know it was out there. But now I know,
+                    I am using it a lot! For example, to calculate the padding or to position something right in the
+                    middle. Now I don’t have to calculate this myself anymore, just put it in one line of code.
+                </p>
+
+                <h3>Custom properties</h3>
+                <p>I had seen custom properties before, but I always though they where the result of a precompressor
+                    like SCSS. So, I never got into it. But since this course, all has been revealed. Custom properties
+                    are awesome! Still, I have to get used to working with them, and find the extend to what is possible
+                    with it. In this assignment, I used basic custom properties to get familiar with them.
+                </p>
+
+                <h3>Darkmode</h3>
+                <p>This website also changes to darker colors incase someone prefers the darkmode. For the most part of
+                    the website I only had to change the custom properties to darker colors. But on some points I had to
+                    manually change some colors around.
+                </p>
+                <img src="https://user-images.githubusercontent.com/55492381/109667993-00ceb600-7b71-11eb-8891-afccbd095b41.gif"
+                    alt="Switching to darkmode">
+
+            </article>
+
+
+            <article>
+                <h2>Web application & Github</h2>
+                <p>More information about this project can be read in the readme on Github.
+                    Also the web application can be viewed and used online, just hit the button below.</p>
+
+                <a href="https://nathanneelis.github.io/css-to-the-rescue-2021/" target=" _blank" class="download-btn">
+                    View the menu card</a>
+                <a href="https://github.com/NathanNeelis/css-to-the-rescue-2021" target="_blank" class="download-btn">
+                    Visit the Github Repo</a>
+
+            </article>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+</html>

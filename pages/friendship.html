@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS  -->
-    <link rel="stylesheet" href="../style/detailpage-style.css">
+    <base href="/">
+    <link rel="stylesheet" href="style/detailpage-style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
     <!-- FONTS  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,7 +22,8 @@
     <!-- Web details  -->
     <title>Nathan Neelis</title>
 
-    <!-- favicon  -->
+    <!-- SCRIPTS  -->
+    <script src="/js/script-detailpage.js" defer></script>
 </head>
 
 <body>
@@ -32,35 +37,34 @@
                 <li><a href="../index.html">
                         Home
                     </a></li>
-                <li>
-                    <a href="" id="projectWeb">Projects web development</a>
+                <li id="projectWebWrap">
+                    <a href="" id="projectWeb" class="hoverMe">Projects web development</a>
                     <div class=triangle></div>
                     <ul class="drop-menu" id="menuProjectWeb">
                         <li>
-                            <a href="">Movies web app</a>
+                            <a href="../pages/wafs.html">Movies web app</a>
                         </li>
                         <li>
-                            <a href="">Menu card Zen garden</a>
+                            <a href="../pages/menucard.html">Menu card Zen garden</a>
                         </li>
                         <li>
-                            <a href="">Corona during a study</a>
+                            <a href="../pages/corona.html">Corona during a study</a>
                         </li>
                         <li>
-                            <a href="">Leave your car</a>
+                            <a href="../pages/leaveyourcar.html">Leave your car</a>
                         </li>
                         <li>
-                            <a href="">Friendship<a>
+                            <a href="../pages/friendship.html">Friendship<a>
                         </li>
                         <li>
-                            <a href="">Foodtrucks</a>
+                            <a href="../pages/foodtrucks.html">Foodtrucks</a>
                         </li>
                         <li>
-                            <a href="">Storygrafie</a>
+                            <a href="../pages/storiegrafie.html">Storygrafie</a>
                         </li>
-
                     </ul>
                 </li>
-                <li>
+                <li id="projectUXWrap">
                     <a href="" id="projectUX">Projects ux / ui </a>
                     <div class=triangleUX></div>
                     <ul class="drop-menu" id="menuProjectUX">
@@ -102,7 +106,14 @@
 
             <article>
                 <h2>Assignment</h2>
-                <p>some info about the assignment</p>
+                <p>This project was about creating a dynamic web application for a dating service with Node.js, a
+                    database, HTML, CSS and client-side JS. In the first part of the project you worked solo and did
+                    research on existing dating apps and we had to come up with a job story. Knowing where the focus of
+                    my project lay I had to sketch components within my job story and start working on building a
+                    working prototype using skills acquired in the backend and frontend courses.
+                    The second part of the project I teamed up with 2 other students to combine our job stories to
+                    create a prototype with more functionalities.
+                </p>
             </article>
 
             <article class="description">
@@ -124,25 +135,9 @@
                 </p>
             </article>
 
-
-            <!-- <article>
-                <h2>Job story</h2>
-                <p>To take a closer look at the context each member of our team created a job story.
-                    With this method I create a story around the focus of my project. For me this was filtering.
-                    Other job stories we took a look at where login & register and matching.
-                </p>
-                <h3>Filtering</h3>
-                <p> When I'm bored at home, at the beginning of the evening, watching cooking shows on Netflix,
-                    while
-                    I'm already done with all my homework.
-                    I want to find people that have the same interests as me.
-                    So I can ask them if they want to do something fun that is in both our interests.
-                </p>
-            </article> -->
-
             <article class="highlightArticle">
                 <!-- <img src="../images/friendship/Friendship_logo2.svg" alt="Logo Friendshp"> -->
-                <h2>Features</h2>
+                <h2>Highlights</h2>
                 <h3>Suggestions based on the weather</h3>
                 <p>On the homepage, you see some other users that you might like.
                     Depending on the weather there is a suggestion section that suggests finding people to sport
@@ -215,36 +210,21 @@
 
             </article>
 
-            <article>
-                <h2>Deployment</h2>
-                <p>To finish this project, the application has to go live. But since there is a lot of backend
-                    Javascripting involved you can't just copy it on to a server. You need to rent a server and
-                    install
-                    nodeJS on it. By doing this the server also is able to install all used packages and make the
-                    website working. I used the services of Digital Ocean for this. And our website can be seen and
-                    used
-                    on by clicking on the link below. </p>
 
-                <p>Look around and use the friendship application. If you really do not want to register you can use
-                    the
-                    following login:
-                </p>
+            <article>
+                <h2>Prototype & Github</h2>
+                <p>Want to see our source code? Or our research and documentation? Please visit our Github
+                    repository. You will find most of the research in the Github Wiki.
+                    And take a look around in the friendship application by clicking
+                    below. If you don't want to register, you can use the login details below. </p>
                 <p>Username: sjors@hva.nl</p>
                 <p>Password: 123</p>
-                <a href="http://friendship.nathanneelis.nl:1900/" target=" _blank" class="download-btn"> Go to the
-                    friendship app</a>
-            </article>
 
-            <article>
-                <h2>Github</h2>
-                <p>Want to see our source code? Or our research and documentation? Please visit our Github
-                    repository.
-                </p>
-                <a href="https://github.com/BVictorB/friendship" target="_blank" class="download-btn"> Go to Github
+                <a href="https://app-friendship.herokuapp.com/" target=" _blank" class="download-btn"> Go to the
+                    friendship app</a>
+                <a href="https://github.com/BVictorB/friendship" target="_blank" class="download-btn"> Visit the Github
                     Repo</a>
-                <a href="https://github.com/BVictorB/friendship/wiki" target="_blank" class="download-btn"> Go to
-                    Github
-                    Wiki </a>
+
             </article>
 
         </section>
@@ -253,9 +233,6 @@
 
     </footer>
 
-
-    <!-- SCRIPTS  -->
-    <script src="../js/script-detailpage.js"> </script>
 </body>
 
 </html>

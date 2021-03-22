@@ -32,13 +32,32 @@ function nextImage() {
 const projectsWeb = document.getElementById('projectWeb');
 const menuProjectsWeb = document.getElementById('menuProjectWeb')
 const triangleWeb = document.querySelector('.triangle')
-projectsWeb.addEventListener('click', subMenuWebToggle)
+
 
 //ux
 const projectsUX = document.getElementById('projectUX');
 const menuProjectsUX = document.getElementById('menuProjectUX');
 const triangleUX = document.querySelector('.triangleUX');
+
+
+
+
+// show submenu
+const projectsUXWrap = document.getElementById('projectUXWrap');
+const projectsWebWrap = document.getElementById('projectWebWrap');
+projectsUX.addEventListener('mouseenter', showProjectUXMenu);
+projectsUXWrap.addEventListener('mouseleave', hideProjectUXMenu);
+projectsWeb.addEventListener('mouseenter', showProjectMenu);
+projectsWebWrap.addEventListener('mouseleave', hideProjectMenu);
 projectsUX.addEventListener('click', subMenuUXToggle);
+projectsWeb.addEventListener('click', subMenuWebToggle)
+
+
+
+
+
+
+
 
 function subMenuWebToggle() {
     event.preventDefault();
@@ -50,4 +69,21 @@ function subMenuUXToggle() {
     event.preventDefault();
     menuProjectsUX.classList.toggle('active');
     triangleUX.classList.toggle('turn');
+}
+
+
+function showProjectMenu() {
+    menuProjectsWeb.classList.add('showSubMenu');
+}
+
+function hideProjectMenu() {
+    menuProjectsWeb.classList.remove('showSubMenu');
+}
+
+function showProjectUXMenu() {
+    menuProjectsUX.classList.add('showSubMenu');
+}
+
+function hideProjectUXMenu() {
+    menuProjectsUX.classList.remove('showSubMenu');
 }
