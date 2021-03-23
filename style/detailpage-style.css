@@ -369,17 +369,14 @@ section article {
         opacity: 1;
     }
 
-    nav a:focus:not(nav>ul>li>ul li a:focus) {
-        border-bottom: 1px solid var(--coral);
-        transition: none;
-    }
-
-    ul.drop-menu li:focus-within {
-        border-bottom: 1px solid var(--coral);
-    }
-
     nav a:focus {
+        border-bottom: 1px solid var(--coral);
         outline: none;
+    }
+
+    nav a:hover {
+        border-bottom: 1px solid var(--coral);
+        transition: all .25s ease;
     }
 
     header nav>ul li:focus-within a+div+ul {
@@ -390,10 +387,6 @@ section article {
         outline: dashed;
     }
 
-    ul.drop-menu li:hover {
-        border-bottom: 1px solid var(--coral);
-        transition: all .25s ease;
-    }
 
     nav>ul>li ul>li:first-child {
         margin-top: 1.5rem;
@@ -404,6 +397,7 @@ section article {
     nav>ul>li:nth-child(4) a:hover {
         background: white;
         color: var(--coral);
+        border: none;
     }
 
 }
