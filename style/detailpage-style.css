@@ -266,6 +266,24 @@ section article {
     color: var(--coral);
 }
 
+/* OUTDOOR FOR YOU LOGO  */
+.st0 {
+    fill: #EC621C;
+}
+
+.st1 {
+    fill: #FFFFFF;
+}
+
+.st2 {
+    fill: #878787;
+}
+
+/* BUDDIFY  */
+.buddify img {
+    margin-top: 2.5rem;
+    margin-bottom: .5rem;
+}
 
 
 
