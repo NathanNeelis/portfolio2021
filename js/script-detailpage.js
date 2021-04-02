@@ -1,5 +1,7 @@
 const menuButton = document.getElementById('stickyMenu');
 if (menuButton) {
+    let menu = document.querySelector('.nav');
+    menu.classList.remove('showMenu');
     menuButton.addEventListener('click', menuToggle);
 }
 

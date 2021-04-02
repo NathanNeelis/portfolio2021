@@ -84,14 +84,15 @@ nav {
     overflow-y: scroll;
     width: 100vw;
     height: min(100vh, 100%);
-    margin-left: -100vw;
+    /* margin-left: -100vw; */
     background: var(--aqua);
-    transition: margin .75s cubic-bezier(.69, -0.69, .48, 1.63);
+    transform: translateX(-100vw);
+    transition: transform .75s cubic-bezier(.69, -0.69, .48, 1.63);
 }
 
 .showMenu {
-    margin-left: 0;
-    transition: margin .6s cubic-bezier(.69, -0.69, .48, 1.63);
+    transform: translateX(0);
+    transition: transform .6s cubic-bezier(.69, -0.69, .48, 1.63);
 }
 
 nav>ul:first-child {
