@@ -199,11 +199,11 @@ article h2 {
     margin-top: 4rem;
     margin-bottom: .5rem;
     color: var(--darkmode);
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 
 article h3 {
-    font-size: 1.15em;
+    font-size: 1.4em;
     margin-top: 1rem;
     margin-bottom: .5rem;
 }
@@ -215,6 +215,9 @@ article {
 
 article p {
     margin-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    line-height: 1.7rem;
 }
 
 
@@ -307,6 +310,7 @@ section article {
         position: absolute;
         top: 0;
         margin: 0;
+        transform: translateX(0);
         overflow-y: initial;
         position: relative;
         width: 100vw;
