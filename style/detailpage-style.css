@@ -84,15 +84,26 @@ nav {
     overflow-y: scroll;
     width: 100vw;
     height: min(100vh, 100%);
-    /* margin-left: -100vw; */
     background: var(--aqua);
     transform: translateX(-100vw);
-    transition: transform .75s cubic-bezier(.69, -0.69, .48, 1.63);
+    /* transition: transform .75s cubic-bezier(); */
+}
+
+.hideMenu {
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(.69, -0.69, .48, 1.63);
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
 }
 
 .showMenu {
-    transform: translateX(0);
-    transition: transform .6s cubic-bezier(.69, -0.69, .48, 1.63);
+    animation-name: bounceBack;
+    animation-timing-function: cubic-bezier(.69, -0.69, .48, 1.63);
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
 }
 
 nav>ul:first-child {
@@ -427,4 +438,26 @@ section article {
         border: none;
     }
 
+}
+
+
+/* ANIMATIONS  */
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes bounceBack {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100vw);
+    }
 }

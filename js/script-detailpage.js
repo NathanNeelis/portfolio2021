@@ -1,10 +1,9 @@
 const menuButton = document.getElementById('stickyMenu');
 if (menuButton) {
     let menu = document.querySelector('.nav');
-    menu.classList.remove('showMenu');
     menuButton.addEventListener('click', menuToggle);
+    menu.classList.remove('showMenu')
 }
-
 
 function menuToggle() {
 
@@ -12,8 +11,18 @@ function menuToggle() {
     menu.classList.toggle('showMenu');
 
     nextImage();
+    checkClass(menu)
 }
 
+function checkClass(menu) {
+    const checkMenu = document.querySelector('.showMenu')
+
+    if (checkMenu) {
+        menu.classList.remove('hideMenu')
+    } else if (!checkMenu) {
+        menu.classList.add('hideMenu')
+    }
+}
 
 // change adobe images
 let menuTrack = true;
