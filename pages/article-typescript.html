@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS  -->
+    <base href="/">
+    <link rel="stylesheet" href="style/detailpage-style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Web details  -->
+    <title>Nathan Neelis</title>
+
+    <!-- SCRIPTS  -->
+    <script src="/js/script-detailpage.js" defer></script>
+</head>
+
+<body>
+    <section id="stickyMenu">
+        <img src="../images/hamburger.svg" alt="icon for opening" class="menuIcon">
+        <h2>menu</h2>
+    </section>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">
+                        Home
+                    </a></li>
+                <li id="projectWebWrap">
+                    <a href="" id="projectWeb" class="hoverMe">Projects web development</a>
+                    <div class=triangle></div>
+                    <ul class="drop-menu" id="menuProjectWeb">
+                        <li>
+                            <a href="../pages/wafs.html">Movies web app</a>
+                        </li>
+                        <li>
+                            <a href="../pages/menucard.html">Menu card Zen garden</a>
+                        </li>
+                        <li>
+                            <a href="../pages/corona.html">Corona during a study</a>
+                        </li>
+                        <li>
+                            <a href="../pages/leaveyourcar.html">Leave your car</a>
+                        </li>
+                        <li>
+                            <a href="../pages/friendship.html">Friendship<a>
+                        </li>
+                        <li>
+                            <a href="../pages/foodtrucks.html">Foodtrucks</a>
+                        </li>
+                        <li>
+                            <a href="../pages/storiegrafie.html">Storygrafie</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="projectUXWrap">
+                    <a href="" id="projectUX">Projects ux / ui </a>
+                    <div class=triangleUX></div>
+                    <ul class="drop-menu" id="menuProjectUX">
+                        <li>
+                            <a href="../pages/workspace.html">Workspace</a>
+                        </li>
+                        <li>
+                            <a href="../pages/buddify.html">Buddify</a>
+                        </li>
+                        <li>
+                            <a href="../pages/outdoor.html">Outdoor for you</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#contactMe">
+                        Contact
+                    </a></li>
+                <li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <img src="../images/articles/article_typescript_detailpage.jpg" alt="logo typescript">
+                <h1>Article: <span>Learning the basics of TypeScript</span></h1>
+            </header>
+
+            <article>
+                <p>I have been hearing about the term TypeScript for a while now. Apparently,
+                    all the cool guys use it while I still have no clue what TypeScript is and why
+                    it should be better than regular JavaScript.
+                    About a week ago I had a job interview for an internship at <a
+                        href="https://www.wearetriple.com/">Triple</a>,
+                    they asked me if I knew how to code in TypeScript and Sass. I had to tell them that I was aware it
+                    existed
+                    but that I hadn’t looked into it yet. Since I still had to write an article, it seemed like a good
+                    opportunity to dive
+                    into typescript and write this article about the basics. </p>
+
+                <h3>Tutorial</h3>
+                <p>I followed a course on TypeScript made by The Net Ninja which is my biggest resource in writing this
+                    article.
+                    <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI">Link to the
+                        tutorial.</a>
+                </p>
+
+                <h3>Why TypeScript?</h3>
+                <p>Typescript is an extension to JavaScript. This means that TS (TypeScript) can do all the same things
+                    JS (JavaScript)
+                    can but it comes with new features and syntax. One of these features is strict types, which means
+                    that if you declare
+                    a variable to be a string, you cannot change it later on into a number or a Boolean for example.
+                    This helps us with
+                    validating our code to see if it is working correctly and it helps us to write cleaner code. Another
+                    feature is that
+                    it supports modern JS features like arrow functions, let and const and, when we compile our TS code
+                    into JS code,
+                    we have the option to choose for an older version of JavaScript so it comes compatible with all
+                    browsers.
+                    This is similar to ‘Babel’ if you ever worked with this compiler.
+                </p>
+
+                <h3>Installing TypeScript</h3>
+                <p>You can install TypeScript by using NPM.
+                    <code>npm install -g typescript</code>
+                </p>
+                <p>And that is it! You have already installed TypeScript.
+                    To start, we create a file with a .ts extension and to show you the basics,
+                    I will create a file called basics.ts
+                </p>
+
+                <h3>How to compile to JavaScript</h3>
+                <p>Browsers do not understand the TS syntax and this reason,
+                    we need to compile our TypeScript into JavaScript.
+                    We do this using our terminal, personally, I always use my terminal in
+                    VSCode but that depends on your IDE. Before we start compiling,
+                    I added some code to my basics.ts file so there is actually something to compile.
+                    The code I added is:
+                    <code>let myName = 'Nathan';</code>
+                    <code>console.log(myName)</code>
+                </p>
+
+
+                <p>
+                    To compile, open your terminal and write the following:
+                    <code>tsc basics.ts</code>
+                    However, if you want your javascript file to be named differently than your TS file you can write
+                    both names in the terminal like this:
+                    <code>tsc basics.ts otherfilename.js</code>
+                    These commands compile your TS code into the JS code which you can use in the browser.
+                </p>
+
+                <p>There is one more thing to know:
+                    At the moment, you will have to write this every time you want to compile your code.
+                    But, if you want to compile your code automatically every time you save your file, you can add a
+                    watch mode
+                    <code class="inline">-w</code>
+                    in the command like this:
+                    <code>tsc basics.ts -w</code>
+                </p>
+
+                <h3>Strict type basics</h3>
+                <p>The main difference between TypeScript and JavaScript is that TS uses strict types and JS does not.
+                    This means that if you define a variable as a string, you can’t change it into a number or Boolean
+                    or even an object later on.
+                </p>
+
+                <h4>Variables</h4>
+                <p>So in my example file, I defined a variable with my name. Because we are Using TS, this means that
+                    this variable is
+                    now defined as a string and therefore can’t be changed into a number for example;
+                    <code>let myName = 'Nathan';</code>
+                    <code>myName = 30;</code>
+                </p>
+
+                <p>This doesn’t work, but what does that mean? Well, it means that I will get a red line below the
+                    change saying that the type of number can’t be assigned to variable that has been assigned a string
+                    type. And when I save my file that automatically tries to compile the file, it gives me an error
+                    explaining what caused the error. This, for example, gets very handy when you work with numbers. I
+                    have made this error multiple times while fetching an API and thinking I would receive an object
+                    with a value of a number, which then turns out the be a string. TS helps you to find this error
+                    beforehand.
+                    <code>let myAge= '30';</code>
+                    <code>myAge = 31;</code>
+                </p>
+
+                <h4>Functions</h4>
+                <p>This also works with functions, to explain this I will create a function that returns my age times
+                    two.
+                    <code>const double = (myAge) =&gt; { return myAge * 2 } </code>
+                </p>
+                <p>If I pass in a string it doesn’t give me an error because TypeScript doesn’t know yet that only a
+                    number can be passed in. We can change that by adding <code class="inline">: number</code> to it. So
+                    the function is as followed;
+                    <code>const double = (myAge: number) =&gt; { return myAge * 2 } </code>
+                </p>
+
+                <p>
+                    If I would pass in a string now,
+                    it would give me the error because it expects an number now.
+                    <code>console.log(double('30')) // =&gt; NaN -&gt; Error in TS with myAge: number</code>
+                    <code>console.log(double(30)) // =&gt; 60</code>
+                </p>
+
+                <p>So now TS allows us to type check during development which leads to cleaner code and fewer errors in
+                    the browser according to The Net Ninja. </p>
+
+                <h4>Arrays</h4>
+                <p>Arrays have a strict type as well. If, for example, you had an array with strings in it, you won’t be
+                    able to add a new value to that array if it isn’t a string. To demonstrate this, I created an array
+                    with names and tried to push in a new name and a number.
+                    <code>
+                    <code>let names = ['Nathan', 'Sander', 'Annabel'];</code>
+                    <code>names.push('Wilmer') // =&gt; Wilmer gets added to the array</code>
+                    <code>names.push(3000) // ERROR =&gt; Cannot push a number into an array with type string.</code>
+                    </code>
+                </p>
+
+                <p>If you create an array with different types, however, you will be able to add these types in later.
+                    So, for example, if I have an array with strings and numbers, I am able to add new strings and
+                    numbers but I won’t be able to add an Boolean.
+                     </p>
+
+                <h4>Objects</h4>
+                <p>When using objects in TS you need to know that the object properties have strict types. So if I
+                    create an object about myself with my name, age and relation status, each property will have a type.
+                    So in this object, my name will be a string, age will be a number and my relation status will be a
+                    Boolean.
+                    <code>
+                    <code>let nathan = {</code>
+                    <code class="indent">name: 'Nathan', // => type string</code>
+                    <code class="indent">age: 30, // => type number</code>
+                    <code class="indent">relation: true // => type Boolean</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>When updating this object, all properties would have to be the same type. I wouldn’t be able to
+                    change my age to <code class="inline">’30’</code> because of its specific type. </p>
+
+                <h4>To conclude</h4>
+                <p>TypeScript’s main feature is strict types which let you assign a type to a variable, function, array
+                    or object. When a type is assigned, it cannot be changed into another type afterwards. Because of
+                    this, we write cleaner code that is less prone to errors in the browser. One of the reasons we get
+                    fewer errors in the browser is because we get the error while compiling. It forces us to fix these
+                    error before it lets us compile the TS file into JavaScript. But the errors we get while compiling
+                    help us solve it as well.</p>
+
+                <h3>Explicit types</h3>
+                <p>Currently, when we write a variable, the type of that variable is automatically set. But we can set
+                    variables without giving them a value. To assign a type to a variable without a value we explicitly
+                    have to give this variable a type. It looks like this;
+                    <code>
+                        <code>let myName: string;</code>
+                    <code>let myAge: number;</code>
+                    <code>let relation: boolean;</code>
+                    </code>
+                </p>
+
+                </code></pre>
+                <p>Now as before, I must assign a string to myName and a number to myAge.
+                    Arrays however are a bit more complicated. You can still assign a type to an array like this for
+                    example:
+                    <code>let names: string[];</code>
+                </p>
+                <p>Trying to push any other type than a string will result in an error. But if you push a string to this
+                    variable you also get an error in the browser. This is because the variable is not initialized yet.
+                    You have to initialize the array by giving it a value of an empty array like you would when you
+                    declare a variable as an array. So the correct syntax would be:
+                    <code>let names: string[] = [];</code>
+                </p>
+                <p>But in some cases, you might need more than one type in an array. You can do this by using a union
+                    type.
+                     </p>
+
+
+                <h4>Union type</h4>
+                <p>With a union type, you set the type to be one of two or one of three types. So when I have an array
+                    called mixed and I want it to be able to contain strings and numbers I would define this variable as
+                    a union type like this:
+                    <code>let mixed: (string | number)[] = [];</code>
+                </p>
+
+                <p>Within the parentheses you declare the types that are allowed inside the array divided by a pipe
+                    (vertical slash). When you declare a union type that is not an array, like a normal variable, you
+                    don’t have to use the parentheses. The correct syntax would be;
+                    <code>let mixedVariable: string | number;</code>
+                </p>
+
+                <h4>Explicit object type</h4>
+                <p>You can also set the type of a variable to an object without giving the variable a direct value. For
+                    example, I can say that <code class="inline">let nathan</code> is going to be an object before
+                    adding its value by:
+                    <code>let nathan: object;</code>
+                </p>
+
+                <p>But you can go one step further in setting strict values for an object. I could say that
+                    <code class="inline">let nathan</code> is going to be an object with three properties called name,
+                    age and relation with a set type for each. This would look like this:
+                    <code>
+                    <code>let nathan: {</code>
+                    <code class="indent">name: string,</code>
+                    <code class="indent">age: number,</code>
+                    <code class="indent">relation: boolean</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>Now if I would say <code class="inline">nathan = { }</code> this would get an error although it’s an
+                    object. It would need the three properties as defined above. </p>
+
+                <h4>Type: any</h4>
+                <p>There is one more type that we haven’t covered yet, and that is the any type. This means that we can
+                    assign any value to it, string, number or Boolean, and we can even give it a default value. Below
+                    here is an example of this:
+                    <code>let remarks: any = 25;</code>
+                </p>
+                <p>The remarks variable can be any type and for now, it has the value of the number 25. But the remarks
+                    variable isn’t of the number type. Later on, you could say
+                    <code class="inline">remarks = ‘nice weather today’;</code> and it would be accepted. Be careful
+                    using this type
+                    because it basically makes your TypeScript variable into a JavaScript variable where you lose the
+                    benefits of TypeScript. Apart from using the any type for a variable, it can be used for arrays,
+                    objects and functions as well.
+                </p>
+
+                <h3 id="function-type">Function type</h3>
+                <p>Just like declaring a value to a variable that will set its type, you can also assign a function to a
+                    variable. To show this I created a function that console logs <code
+                        class="inline">hello world</code>.
+                    <code>
+                    <code>let greet = () => {</code>
+                    <code class="indent">console.log('hello world')</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>When I would assign a string to this variable <code class="inline">greet = ‘hello’;</code> it would
+                    give me an
+                    error. Just as with other explicit types you can explicitly set a variable type to function and
+                    assign the function later on to the variable like this:
+                    <code>
+                    <code>let greet: Function;</code>
+                    <code>greet = () => {</code>
+                    <code class="indent">console.log('hello world')</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>it’s also possible to assign the types to parameters in a function. To showcase this, I created a
+                    function that has two parameters. Since this is a small piece of math, it will require numbers and
+                    not strings or Booleans. So in declaring this function I should assign types to the parameters like
+                    this:
+                    <code>
+                    <code>const add = (a: number, b: number) => {</code>
+                    <code class="indent">return a + b;</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>Giving a parameter a union type is possible as well, you can even make a parameter optional. At the
+                    moment parameters <code class="inline">a</code> and <code class="inline">b</code> are required,
+                    without these, you will get an
+                    error. But what if you would like to add an optional parameter? Well, you can do this by adding a
+                    question mark like this:
+                    <code>
+                    <code>const add = (a: number, b: number, c?: number | string) => {</code>
+                    <code class="indent">return a + b;</code>
+                    <code class="indent">console.log(c)</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>It is custom to declare all required arguments first and all optional arguments at the end.
+                    Otherwise, all the arguments get mixed up, and we want to keep our code clean, remember? </p>
+                <p>If you don’t pass in any value for <code class="inline">c</code> when declaring this function, it
+                    returns as
+                    <code class="inline">undefined</code>. But you can also assign a default value for this parameter
+                    this way. Because
+                    of it’s default value you can’t use the question mark any longer to make this parameter optional.
+
+                    <code>
+                    <code>const add = (a: number, b: number, c: number | string = 10) => {</code>
+                    <code class="indent">return a + b;</code>
+                    <code class="indent">console.log(c)</code>
+                    <code>}</code>
+                    </code>
+                </p>
+
+                <p>As often, our function <code class="inline">add</code> returns a value. When we declare this function
+                    in a variable
+                    like below, TypeScript can infer the type that is being returned by the function and sets it as the
+                    type of the variable. So in the example below, the variable <code class="inline">result</code> will
+                    have a type of
+                    a number because it is the returned value of our function <code class="inline">add</code>.
+                    <code>let result = (add(10, 4)); // => type: number</code>
+                </p>
+                <p>You can also explicitly declare the return type of a function. You do this by adding a colon after
+                    the function parentheses like in the example below. Now you don’t need to do this, because
+                    TypeScript is automatically inferring the return type, but you might choose to do so when you have a
+                    larger function and want to show that it will return a number at a glance. It does increase the
+                    readability of your function.
+                    <code>
+                    <code>const add = (a: number, b: number): number => {</code>
+                    <code class="indent">return a + b;</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>Our function returns a value of a number but what if a function doesn’t return anything? Well, then
+                    it returns a <code>void</code> value. So instead of return a + b we now return a console log, the
+                    return value of this function is of the type void.
+                    <code>
+                    <code>const add = (a: number, b: number) => {</code>
+                    <code class="indent">console.log(a + b)</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>Void is a complete lack of any value. In JavaScript this would return undefined but in TypeScript
+                    they created a difference between undefined and returning no values, which become void. </p>
+
+                <h4>Type alias</h4>
+                <p>Working with functions and specifying the types of the parameters can produce a very long string.
+                    Sometimes, these parameters are the same for other functions and the result is a duplicate of a very
+                    long string. Below you will see an example of two functions that require the same parameters. Notice
+                    how long both parameters are while they are just a duplicate of one another.
+                    <code>
+                    <code>const sayHello = (user: {name: string, uid: string | number }) => {</code>
+                    <code class="indent">console.log('hello')</code>
+                    <code>}</code>
+
+                    <code>const sayGoodbye = (user: {name: string, uid: string | number }) => {</code>
+                    <code class="indent">console.log('bye bye')</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>Another, more clean way of writing this, is by using Type Aliases. You can define the type as
+                    follows:
+                    <code>type StringOrNum = string | number;</code>
+                </p>
+                <p>You can also nest types into each other. So in our case of the duplicate functions, we would want to
+                    define the type of the object like this:
+                    <code>type objWithName = { name: string, uid: StringOrNum}</code>
+                </p>
+                <p>Defining these two types makes both functions a lot shorter. You can add these Type Aliases to the
+                    function parameters like this:
+                    <code>
+                    <code>const sayHello = (user: objWithName) => {</code>
+                    <code class="indent">console.log('hello')</code>
+                    <code>}</code>
+
+                    <code>const sayGoodbye = (user: objWithName) => {</code>
+                    <code class="indent">console.log('bye bye')</code>
+                    }</code>
+                    </code>
+                </p>
+                <p>That has become a lot shorter and more readable. Type Aliases are very flexible, and it makes it a
+                    lot easier in the long run. It also reduces code duplication which is a great benefit. </p>
+
+                <h4>Function signature</h4>
+                <p>You can also add a function signature to define out of which elements a function is made. So, for
+                    example, the greet function signature below defines that the function should have two parameters
+                    which, in this case, should both be strings and it will return void. De function is written out
+                    below the signature.
+                    <code>
+                    <code>let greetUser: (a: string, b: string) => void;</code>
+                    <code>greetUser = (name: string, greeting: string) => {</code>
+                    <code class="indent">console.log(name, 'says', greeting)</code>
+                    <code>}</code>
+                    </code>
+                </p>
+
+                <h3>Interacting with the DOM</h3>
+                <p>Similar as with JavaScript you can interact with the DOM in TypeScript. You can query elements,
+                    update the HTML and add event listeners. However, there are some differences. The first being to
+                    query elements. In this example, I am selecting all anchor elements and logging them in the console.
+                    This works fine, but when I try to log a property of the anchor tag like the href I’ll get an error.
+                    TypeScript tells us that our request might be <code>null</code>. This is because TypeScript doesn’t
+                    have access to our HTML, so it doesn’t know for sure that there is an anchor tag present and
+                    therefore it is warning us that the result might be null. </p>
+                <blockquote>
+                    <p>Now, I must say when I was testing this theory, I didn’t get an error but I included it
+                        nevertheless because the theory behind it is sound and good to know.</p>
+                </blockquote>
+                <p>
+                    <code>
+                    <code>const anchor = document.querySelector('a');</code>
+                    <code>console.log(anchor.href);</code>
+                    </code>
+                    To make sure the query has a value, you can add an if statement like below to be sure it’s not null
+                    and avoid errors.
+
+                    <code>
+                    <code>if (anchor) {</code>
+                    <code class="indent">console.log(anchor.href);</code>
+                    <code>}</code>
+                    </code>
+                </p>
+                <p>Another way, when you are 100% sure that the query selector does hold a value, you can add an
+                    exclamation mark at the end of the query selector like this:
+                    <code>const anchor = document.querySelector('a')!;</code>
+                </p>
+                <p>Another benefit of TypeScript is that it holds a special type for every DOM element. When you hover
+                    over your variable that hold a query selector, it tells you what special type it has. In our case,
+                    it holds an anchor element and it tells us the following:
+                    <code class="inline">const anchor: HTMLAnchorElement</code>. This means that TypeScript knows this
+                    variable is an
+                    anchor HTML element and it gives us access to all it’s properties and methods. So in VSCode, when we
+                    hover over this variable we will get a suggestion list with all its properties and methods.
+                </p>
+
+                <h4>Type Casting</h4>
+                <p>When you query select a class, however, it doesn’t save the special type of that element to your
+                    variable. But no worries, you can add it yourself by using Type Casting. You can add this special
+                    type by saying what type of element that variable is by using the <code class="inline">as</code>
+                    word. Here below
+                    you can find an example of this.
+                    <code>const anchorClass = document.querySelector('.anchorElement') as HTMLAnchorElement;</code>
+                </p>
+                <p>Using this method, I will still get all the benefits of the list with all methods and properties for
+                    an anchor element while targeting the class.</p>
+
+                <h3>Conclusion</h3>
+                <p>Knowing these basics will get you started with TypeScript. We learned what strict types are, and how
+                    they are being used by TS and how we can explicitly add types to variables without any values. We
+                    also learned that we could use multiple types in a variable if we use union types and how to use
+                    these types in functions. All this to write cleaner code and reduces duplicate code while following
+                    a new set of rules. Because of this, we are less prone to errors and often we will notice the errors
+                    when we are compiling. To end the basics, we dove into interacting with the DOM to get us really
+                    started with creating an application using TypeScript. I have learned a lot from following The Net
+                    Ninja tutorials on YouTube and if you want to know more about TypeScript, I recommend watching his
+                    videos because I haven’t covered all of it in these basics. I enjoyed learning TypeScript and its
+                    benefits, now all I need is a new project!</p>
+
+                <h3>Resources</h3>
+                <p><a href="https://www.typescriptlang.org/">typescript</a><br><a
+                        href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI">The Net Ninja TS
+                        tutorial</a></p>
+            </article>
+
+
+            <article>
+                <h2>Read it on github</h2>
+                <p>The article is also on github as a markdown file.</p>
+
+                <a href="https://github.com/NathanNeelis/weekly-nerd-2021/blob/master/Article_typescrypt.md"
+                    target=" _blank" class="download-btn">
+                    Github link</a>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+</html>
