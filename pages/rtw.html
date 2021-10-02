@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS  -->
+    <base href="/">
+    <link rel="stylesheet" href="style/detailpage-style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Web details  -->
+    <title>Nathan Neelis</title>
+
+    <!-- SCRIPTS  -->
+    <script src="/js/script-detailpage.js" defer></script>
+</head>
+
+<body>
+    <section id="stickyMenu">
+        <img src="../images/hamburger.svg" alt="icon for opening" class="menuIcon">
+        <h2>menu</h2>
+    </section>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">
+                        Home
+                    </a></li>
+                <li id="projectWebWrap">
+                    <a href="" id="projectWeb" class="hoverMe">Projects web development</a>
+                    <div class=triangle></div>
+                    <ul class="drop-menu" id="menuProjectWeb">
+                        <li>
+                            <a href="../pages/wafs.html">Movies web app</a>
+                        </li>
+                        <li>
+                            <a href="../pages/menucard.html">Menu card Zen garden</a>
+                        </li>
+                        <li>
+                            <a href="../pages/corona.html">Corona during a study</a>
+                        </li>
+                        <li>
+                            <a href="../pages/leaveyourcar.html">Leave your car</a>
+                        </li>
+                        <li>
+                            <a href="../pages/friendship.html">Friendship<a>
+                        </li>
+                        <li>
+                            <a href="../pages/foodtrucks.html">Foodtrucks</a>
+                        </li>
+                        <li>
+                            <a href="../pages/storiegrafie.html">Storygrafie</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="projectUXWrap">
+                    <a href="" id="projectUX">Projects ux / ui </a>
+                    <div class=triangleUX></div>
+                    <ul class="drop-menu" id="menuProjectUX">
+                        <li>
+                            <a href="../pages/workspace.html">Workspace</a>
+                        </li>
+                        <li>
+                            <a href="../pages/buddify.html">Buddify</a>
+                        </li>
+                        <li>
+                            <a href="../pages/outdoor.html">Outdoor for you</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#contactMe">
+                        Contact
+                    </a></li>
+                <li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <img src="https://user-images.githubusercontent.com/55492381/116139937-e4fe1100-a6d6-11eb-926e-6d62b8451fa5.gif"
+                    alt="The DnD playground application">
+                <h1>Project: <span>Dungeon and Dragons playground</span></h1>
+            </header>
+
+            <article>
+                <h2>Assignment</h2>
+                <p>This is a readme driven project. Which means that I first figure out what I want to make and document
+                    this in my readme. The application I am making is based on user interaction and works real time for
+                    multiple users.
+                </p>
+            </article>
+
+            <article class="description">
+                <h2>Description</h2>
+                <p>This app is made for Dungeon and Dragons groups that have use for an online tool. Since Corona we are
+                    limited in playing DnD in groups, so often groups go online to continue their quests online. In this
+                    app you can upload your own map and your friends can join you. Everyone gets their character on
+                    screen with a collored dot. You can move around in the map by clicking on the grid. There is also a
+                    chat function that lets you share your notes and roll the dice using a dice API.
+                </p>
+            </article>
+
+            <article class="description">
+                <h2>Concept</h2>
+                <p>
+                    One of the three concepts is a Dungeon and Dragons helper where you should be able to upload an map,
+                    and move your character real time around. Also I want to add a dice function that throws the dice
+                    for you
+                    and calculates its outcome. Sharing notes and displaying the dice rolls should be added to the chat
+                    funtion
+                    I intend to add.
+                </p>
+                <img src="https://user-images.githubusercontent.com/55492381/114394350-631ccc80-9b9b-11eb-9124-d0906f2408f6.jpg"
+                    alt="Concept image for the DnD helper">
+            </article>
+
+
+            <article class="highlightArticle">
+                <h2>Highlights</h2>
+                <h3>Rooms</h3>
+                <p>Enter a room to use this application with just your friends.
+                </p>
+
+                <h3>Choose realtime position</h3>
+                <p>You can click on the grid map to change your position realtime. This way the other players know of
+                    your movements.</p>
+
+                <h3>Chat</h3>
+                <p>Share your notes in the chat</p>
+
+                <h3>Dice</h3>
+                <p>Use the dice function to throw the dice and calculate the result</p>
+
+                <h3>Login</h3>
+                <p>To use this application you have to login. You can login with your google credentials. For this login
+                    process I used the firebase authentication method that easily lets me use the Google authentication.
+                    Others as well, but I choose to only use google for this prototype.</p>
+                <img src="https://user-images.githubusercontent.com/55492381/116138926-bc294c00-a6d5-11eb-8d51-0486852e7e35.gif"
+                    alt="Login feature gif">
+
+
+                <h3>Database - Firestore</h3>
+                <p>Before I used the firestore database, the data was lost on a disconnect. But with the firestore
+                    database you can continue where you left. If you enter a room, the firestore database will look
+                    through all my databases if there is one matching your room name. If there is, it will add the last
+                    player locations in the map. So if you refresh or close your windows by accident you can always
+                    reconnect with the same room and you can continue the game.
+                </p>
+                <p>
+                    If there isn't a matching database for this room, it will create one on the first player location
+                    move. Every move gets updated in the database. Then every move the sockets fetches this data from
+                    the database again and updates the dom via the client socket.
+                </p>
+                <p>
+                    The database looks like this:
+                </p>
+                <img src="https://user-images.githubusercontent.com/55492381/116138016-994a6800-a6d4-11eb-89e6-363728edb8f9.png"
+                    alt="Example of the Firestore databse">
+            </article>
+
+
+            <article>
+                <h2>Web application & Github</h2>
+                <p>More information about this project can be read in the readme on Github.
+                    Also the web application can be viewed and used online, just hit the button below.</p>
+
+                <a href="https://dnd-playground.herokuapp.com/" target=" _blank" class="download-btn">
+                    Open the application</a>
+                <a href="https://github.com/NathanNeelis/DnD-Playground" target="_blank" class="download-btn">
+                    Visit the Github Repo</a>
+
+            </article>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+</html>

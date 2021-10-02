@@ -218,6 +218,13 @@ article p {
   line-height: 1.7rem;
 }
 
+article ol,
+article ul {
+  padding-left: 1.75rem;
+  font-size: 1.15rem;
+  line-height: 1.7rem;
+}
+
 main section h2 {
   color: var(--darkmode);
   text-align: left;
@@ -244,11 +251,11 @@ article.highlightArticle h2 {
 }
 
 .highlightArticle.hipper img {
-  width: 80%;
+  width: 100%;
   display: block;
   margin: 1rem auto 2rem auto;
   border-radius: 1rem;
-  border: 3px solid #333333;
+  border: 2px solid var(--aqua);
 }
 
 .highlightArticle.hipper img.static {
