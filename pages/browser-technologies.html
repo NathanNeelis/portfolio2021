@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS  -->
+    <base href="/">
+    <link rel="stylesheet" href="style/detailpage-style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Web details  -->
+    <title>Nathan Neelis</title>
+
+    <!-- SCRIPTS  -->
+    <script src="/js/script-detailpage.js" defer></script>
+</head>
+
+<body>
+    <section id="stickyMenu">
+        <img src="../images/hamburger.svg" alt="icon for opening" class="menuIcon">
+        <h2>menu</h2>
+    </section>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">
+                        Home
+                    </a></li>
+                <li id="projectWebWrap">
+                    <a href="" id="projectWeb" class="hoverMe">Projects web development</a>
+                    <div class=triangle></div>
+                    <ul class="drop-menu" id="menuProjectWeb">
+                        <li>
+                            <a href="../pages/article-typescript.html">Article: TypeScript</a>
+                        </li>
+                        <li>
+                            <a href="../pages/hipper.html">Hipper</a>
+                        </li>
+                        <li>
+                            <a href="../pages/hcd.html">Exclusive Design</a>
+                        </li>
+                        <li>
+                            <a href="../pages/article-firebase.html">Article: Firebase</a>
+                        </li>
+                        <li>
+                            <a href="../pages/rtw.html">Dungeons and Dragons</a>
+                        </li>
+                        <li>
+                            <a href="../pages/browser-technologies.html">Browser Technologies</a>
+                        </li>
+                        <li>
+                            <a href="../pages/pwa.html">Progressive Web App</a>
+                        </li>
+                        <li>
+                            <a href="../pages/wafs.html">Movies web app</a>
+                        </li>
+                        <li>
+                            <a href="../pages/menucard.html">Menu card Zen garden</a>
+                        </li>
+                        <li>
+                            <a href="../pages/corona.html">Corona during a study</a>
+                        </li>
+                        <li>
+                            <a href="../pages/leaveyourcar.html">Leave your car</a>
+                        </li>
+                        <li>
+                            <a href="../pages/friendship.html">Friendship<a>
+                        </li>
+                        <li>
+                            <a href="../pages/foodtrucks.html">Foodtrucks</a>
+                        </li>
+                        <li>
+                            <a href="../pages/storiegrafie.html">Storygrafie</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="projectUXWrap">
+                    <a href="" id="projectUX">Projects ux / ui </a>
+                    <div class=triangleUX></div>
+                    <ul class="drop-menu" id="menuProjectUX">
+                        <li>
+                            <a href="../pages/workspace.html">Workspace</a>
+                        </li>
+                        <li>
+                            <a href="../pages/buddify.html">Buddify</a>
+                        </li>
+                        <li>
+                            <a href="../pages/outdoor.html">Outdoor for you</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#contactMe">
+                        Contact
+                    </a></li>
+                <li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <img src="https://user-images.githubusercontent.com/55492381/112881609-31503400-90cc-11eb-9094-3c2e0aaf18fa.png"
+                    alt="hero image">
+                <h1>Project: <span>Photo Album</span></h1>
+            </header>
+
+            <article>
+                <h2>Assignment</h2>
+                <p>During this project we took a closer look at progressive enhancement.
+                    This ment we took a close look at the three layers that are central in progressive enhancement:
+                <ol>
+                    <li>Functional/reliable layer</li>
+                    <li>Usable layer</li>
+                    <li>Pleasurable layer</li>
+                </ol>
+                </p>
+
+                <h3>1. Functional / reliable layer</h3>
+                <p>The reliable layer is the layer that always should work. No matter the circumstances. In this layer
+                    the core functionalities are the most important.</p>
+
+                <h3>2. Usable layer</h3>
+                <p>The usable layer is where design meets the user.
+                    Think about information hierarchy and ordening.
+                    Just keep the accessibility in mind while doing so.
+                </p>
+
+                <h3>3. Pleasurable layer</h3>
+                <p>This is the layer where you can add functionalities that make the use of the application easier and
+                    more fun.
+                    But these are by no means neccesary. Just keep in mind, if the function fails in a browser, the user
+                    should still be able to complete his task.
+                </p>
+            </article>
+
+            <article class="description">
+                <h2>Description</h2>
+                <p>This app is an online photo album. In the app you can scroll through all the uploaded images. You can
+                    view all the details by clicking on the image which will send you to the detail page. Also in this
+                    app you can make a selection of photo's to add to a serie and view this serie as a slideshow or in a
+                    carousel. Do you want your images added to this app? Simply upload them! Made a mistake? Go to the
+                    detailed page to edit its content.
+            </article>
+
+            <article>
+                <h2>Core functionalities</h2>
+                <p>I chose for the assignment to create a photoalbum.
+                    In the list below I listed which core functionalities are needed in this project.
+                <ul>
+                    <li>Overview page with all the photographs</li>
+                    <li>Detail page for each photograph with meta info</li>
+                    <li>Upload a photo to the overview page</li>
+                    <li>Add photo's to a series</li>
+                    <li>Overview page with photo's in a serie</li>
+                    <li>Edit meta information of a photograph</li>
+                </ul>
+                </p>
+            </article>
+
+            <article class="highlightArticle hipper">
+                <h2>Highlights</h2>
+                <h3>Progressive enhancement</h3>
+                <p>The photo album is still useable if the user is not able to use JavaScript or CSS.
+                    I made sure all functionalities still work. In the image below you see the detail page of a Photo
+                    where you are still able to add the photo to your series and edit its meta data.
+                </p>
+                <img src="https://user-images.githubusercontent.com/55492381/112503878-9550c080-8d8b-11eb-875d-ef767f1ce8df.gif"
+                    alt="Detail page without CSS and Javascript">
+
+                <h3>Responsive</h3>
+                <p>Another way to improve the usability is making sure the photo album is responsive. By adding
+                    flex-boxes and grid lay-outs the album already becomes very responsive. But since I used a row
+                    lay-out for my overview pages I had to write some media queries to scale the amount of rows. Ofcours
+                    this is done from a mobile-first point of view.</p>
+                <img src="https://user-images.githubusercontent.com/55492381/112499352-ac8daf00-8d87-11eb-9470-30447db89c1b.png"
+                    alt="iphone view of the homepage">
+
+                <h3>Geolocation</h3>
+                <p>Adding an geolocation option is very close to the pleasurable layer, but in this use case I actually
+                    think its still in the usable layer. Using geolocation you can add your location in the meta info
+                    without even thinking about where you are at the moment. As the most beautifull images are mostly
+                    made abroad and sometimes deep in nature, this option is very usable. I will explain more about how
+                    this feature works in the browser testing tab, but in the gif below you can see that just by hitting
+                    the icon your location gets added in the input field.</p>
+                <img src="https://user-images.githubusercontent.com/55492381/112505114-c1207600-8d8c-11eb-8340-561250e8df22.gif"
+                    alt="Using geolocation to add your location of the photograph">
+
+                <h3>Drag and drop</h3>
+                <p>Looking through your photographs, you finally find the one that you would like to upload. Hitting the
+                    browse button lets you search your file all over again. This can be a very frustrating experience.
+                    Using this drag and drop feature, you can just grab your file and drop it into the dropzone. And if
+                    you're not at home and on a mobile device, you can just click on the dropzone and even choose
+                    between taking a new photograph or selecting one in your files. The orignal method works just as
+                    well, because, you can actually drag and drop onto a original input field with the file type. But
+                    not many people know it, and you can't really style the element and tell the user you can. That is
+                    why this is in the pleasurable layer.</p>
+                <img src="https://user-images.githubusercontent.com/55492381/112506396-fe393800-8d8d-11eb-8478-c984ad799fc8.gif"
+                    alt="Dragging and dropping an image to upload">
+            </article>
+
+
+            <article>
+                <h2>Web application & Github</h2>
+                <p>More information about this project can be read in the readme on Github.
+                    Also the web application can be viewed and used online, just hit the button below.</p>
+
+                <a href="https://app-photoalbum.herokuapp.com/" target=" _blank" class="download-btn">
+                    Open the application</a>
+                <a href="https://github.com/NathanNeelis/browser-technologies-2021" target="_blank"
+                    class="download-btn">
+                    Visit the Github Repo</a>
+
+            </article>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+</html>

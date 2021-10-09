@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS  -->
+    <base href="/">
+    <link rel="stylesheet" href="style/detailpage-style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Web details  -->
+    <title>Nathan Neelis</title>
+
+    <!-- SCRIPTS  -->
+    <script src="/js/script-detailpage.js" defer></script>
+</head>
+
+<body>
+    <section id="stickyMenu">
+        <img src="../images/hamburger.svg" alt="icon for opening" class="menuIcon">
+        <h2>menu</h2>
+    </section>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">
+                        Home
+                    </a></li>
+                <li id="projectWebWrap">
+                    <a href="" id="projectWeb" class="hoverMe">Projects web development</a>
+                    <div class=triangle></div>
+                    <ul class="drop-menu" id="menuProjectWeb">
+                        <li>
+                            <a href="../pages/article-typescript.html">Article: TypeScript</a>
+                        </li>
+                        <li>
+                            <a href="../pages/hipper.html">Hipper</a>
+                        </li>
+                        <li>
+                            <a href="../pages/hcd.html">Exclusive Design</a>
+                        </li>
+                        <li>
+                            <a href="../pages/article-firebase.html">Article: Firebase</a>
+                        </li>
+                        <li>
+                            <a href="../pages/rtw.html">Dungeons and Dragons</a>
+                        </li>
+                        <li>
+                            <a href="../pages/browser-technologies.html">Browser Technologies</a>
+                        </li>
+                        <li>
+                            <a href="../pages/pwa.html">Progressive Web App</a>
+                        </li>
+                        <li>
+                            <a href="../pages/wafs.html">Movies web app</a>
+                        </li>
+                        <li>
+                            <a href="../pages/menucard.html">Menu card Zen garden</a>
+                        </li>
+                        <li>
+                            <a href="../pages/corona.html">Corona during a study</a>
+                        </li>
+                        <li>
+                            <a href="../pages/leaveyourcar.html">Leave your car</a>
+                        </li>
+                        <li>
+                            <a href="../pages/friendship.html">Friendship<a>
+                        </li>
+                        <li>
+                            <a href="../pages/foodtrucks.html">Foodtrucks</a>
+                        </li>
+                        <li>
+                            <a href="../pages/storiegrafie.html">Storygrafie</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="projectUXWrap">
+                    <a href="" id="projectUX">Projects ux / ui </a>
+                    <div class=triangleUX></div>
+                    <ul class="drop-menu" id="menuProjectUX">
+                        <li>
+                            <a href="../pages/workspace.html">Workspace</a>
+                        </li>
+                        <li>
+                            <a href="../pages/buddify.html">Buddify</a>
+                        </li>
+                        <li>
+                            <a href="../pages/outdoor.html">Outdoor for you</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#contactMe">
+                        Contact
+                    </a></li>
+                <li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <header>
+                <img src="../images/articles/article_typescript_detailpage.jpg" alt="logo typescript">
+                <h1>Article: <span>The basics of Firebase authentication</span></h1>
+            </header>
+
+            <article>
+                <p>About a year ago I had to create a login feature for an application. This was a considerable amount
+                    of work because, apart from the actual form fields, it had to check in the database whether or not
+                    the user existed and if his password was a match. To do this, I let the user register and saved his
+                    credentials in a MongoDB database. To increase the security we implemented a password hashing method
+                    and created fail saved incase the user forgot his password.</p>
+                <p>For my current project, I'm working on an application that shows a Dungeon and Dragons (DnD) map and
+                    lets users show their location on that map. You can also roll dice and share messages with your
+                    online DnD group. For this project, I want users to be able to login. However, my deadline is very
+                    tight, and I won't have enough time to go through all the login hassle as I did last year.</p>
+                <p>Luckily there is an easier way… Firebase authentication. In my DnD application, I also needed a
+                    database to store data and since Firebase is such a database but also comes with an authentication
+                    feature, it offered a great solution for my login ‘problem’.</p>
+
+                <h3>Adding Firebase to my application</h3>
+                <p>Using Firebase is fairly easy when you have done it more than once. It does however require some
+                    steps to setup that makes it more difficult to apply the first time. Luckily, the Firebase
+                    documentation is a great help and guides you through these steps. In this article, I will give some
+                    insight into the steps I took to add Firebase to my project and use its authentication feature.</p>
+                <p>The first step was to create a new project in the Firebase console.</p>
+                <img src="https://user-images.githubusercontent.com/55492381/121017487-9e9fd580-c79d-11eb-83a3-50f36d4ed258.png"
+                    alt="The start of creating a firebase project">
+
+                <p>The next step was to connect the app with Firebase.
+                    To connect my app I had to choose between iOS, Android or Web. Since my DnD app is a web application
+                    I went with the web option. The next step was naming my app and firebase gave me the option to set
+                    up Firebase Hosting. This option lets you deploy your application. I won’t go into Firebase Hosting,
+                    but it might be worth considering if you haven’t already deployed your app.</p>
+
+                <p>After finishing these steps I received some script tags to connect my application with Firebase.</p>
+                <img src="https://user-images.githubusercontent.com/55492381/136653639-2c31d1ab-9959-4d20-bad9-48e36a7e9129.png"
+                    alt="firebase code to add in a script tag">
+
+                <p>Once I had completed these steps, I could start using Firebase in my client-side javascript.</p>
+
+                <h3>Login with Firebase Authentication</h3>
+                <p>Although setting up Firebase in my application cost some time, adding a login feature went magically
+                    fast. For my app I only created a Google login, but you can add others like Facebook, Twitter,
+                    Github, Microsoft etc..</p>
+                <p>
+                    To use any of these, in my case Google, I had to go into my Firebase console, go to Authentication
+                    and then to the Sign-in method page. Here you will see a list of available login methods that you
+                    have to enable before you can use them. This is very easy, by clicking on the Google option I could
+                    simply enable it by using the toggle.</p>
+
+                <img src="https://user-images.githubusercontent.com/55492381/121017898-179f2d00-c79e-11eb-9418-7ab499ff6277.png"
+                    alt="firebase authentication enable for google">
+
+                <p>Now everything has been set-up it’s time to use this login on the application.
+                    First, I created a login button in HTML and styled it with CSS. Then I added an event listener to
+                    this button. Once it is clicked, it will execute a certain function called ‘googleSignIn’.</p>
+
+                <img src="https://user-images.githubusercontent.com/55492381/136653718-10440cac-273a-4a8e-89cb-f3cbd0502892.png"
+                    alt="code block google sign in">
+
+                <p>My button lives in a form, so first of all I prevent the default behavior, which is sending the form
+                    and redirecting me to another page because I want the user to stay on the same page and receive, in
+                    this case, a pop-up login window to login.</p>
+
+                <p>To handle the sign-in flow I had to create an instance of the Google provider object. This is the
+                    variable ‘provider’. After that, I let Firebase start an authentication by using a pop-up with a
+                    sign in. You can also choose for a sign in with redirection, then you will be redirected to a Google
+                    sign-in page, once you have been signed in there, you will be redirected back to your web
+                    application. But I preferred the pop-up method because it keeps the user in your application
+                    environment.</p>
+
+                <p>Once the user is logged in, I updated the username in the DnD Application to the name from the
+                    account that has been logged in. This is done by resolving a promise, since logging in a user
+                    happens asynchronous.</p>
+
+                <img src="https://user-images.githubusercontent.com/55492381/116138926-bc294c00-a6d5-11eb-8d51-0486852e7e35.gif"
+                    alt="Using google login">
+
+                <p>Using different login methods is pretty easy now that I have setup this google login. I only have to
+                    change the provider variable to change the method. For example, if I wanted to use a Facebook login
+                    instead, I could replicate the code and change the provider variable to:
+                    <code>var provider = new firebase.auth.FacebookAuthProvider();</code>
+                </p>
+
+                <p>When a user has logged in, you get a bunch of information about him. The information example below is
+                    from my own account with a Google login.</p>
+
+                <code class="codeBlockWrapper">
+                    <code class="codeBlock">additionalUserInfo: Wr</code>
+                <code class="codeBlock">isNewUser: false</code>
+                <br>
+                <code class="codeBlock">profile:</code>
+                <code class="codeBlock">email: "Nathan.neelis@hva.nl"</code>
+                <code class="codeBlock">family_name: "Neelis"</code>
+                <code class="codeBlock">given_name: "Nathan"</code>
+                <code
+                    class="codeBlock">granted_scopes: "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid"</code>
+                <code class="codeBlock">id: "112969141390938316214"</code>
+                <code class="codeBlock">locale: "nl"</code>
+                <code class="codeBlock">name: "Nathan Neelis"</code>
+                <code
+                    class="codeBlock">picture: "https://lh3.googleusercontent.com/a/AATXAJy3r_bfMNdh4LF1cTsqaYzVKRKJncY3dphEjTMe=s96-c"</code>
+                <code class="codeBlock">verified_email: true</code>
+                </code>
+
+                <p>You can also request more information about the user that is logging in. But you have to be careful
+                    with that as you are requesting personal information and it might scare off the user. However, in
+                    case you really do need this information, you could add this scope to the provider variable like
+                    this:
+                    <code>provider.addScope('user_birthday');</code>
+                </p>
+                <p>Last but not least, I can also check if the user is logged in on other pages. In my application, if
+                    they’re not logged in, they will be redirected to the login page. In the code example below you will
+                    see that, if a user exists, there will be a console log that shows the user information. If it
+                    doesn’t exist, the user will be redirected to the homepage which, in my case, is also the login
+                    page.</p>
+                <img src="https://user-images.githubusercontent.com/55492381/136654397-4b377cf4-baf9-4fd0-9092-7f6b5a9b3cc7.png"
+                    alt="firebase authentication codeblock">
+
+
+                <h3>Conclusion</h3>
+                <p>Firebase is a really good alternative to creating your own login feature. It saves time and errors
+                    because you don’t have to think about registering, forgotten passwords and the difficult task of
+                    storing passwords save and secure.</p>
+
+                <p>In this project, I used Firebase for the first time, and it was a lot more work than it will be the
+                    next time. I had to read lots of documentation and had to figure out that all of the authentication
+                    processes are happening on the client-side. This took me some time to figure out because I was
+                    trying to make it work on the server-side, like I would for a MongoDB database. But once I made this
+                    connection, it all became clear and understandable. The Firebase documentation is a big help but the
+                    first time you really have to go ‘through’ it.</p>
+
+                <p>I also think there is a lot more possible with regards to creating a login feature with Firebase. But
+                    in this article, I covered the basics on how I got it working.</p>
+
+
+                <h3>Rescources</h3>
+                <a href="https://firebase.google.com/docs/web/setup?authuser=1">Connecting your app to Firebase</a>
+                <a href="https://firebase.google.com/docs/auth/web/start?authuser=1">Getting started with Firebase
+                    Authentication</a>
+            </article>
+
+
+            <article>
+                <h2>Read it on github</h2>
+                <p>The article is also on github as a markdown file.</p>
+
+                <a href="https://github.com/NathanNeelis/weekly-nerd-2021/blob/master/Article_firebase.md"
+                    target=" _blank" class="download-btn">
+                    Github link</a>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+</html>
