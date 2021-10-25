@@ -118,30 +118,28 @@
 
             <article>
                 <h2>Assignment</h2>
-                <p> In a previous project I created this web application on the client side making a Single Wep
-                    Application.
-                    In this project I will be redesigning this into a server side rendered Progressive Web App.
-                    My assignment is to dive in to the functionalities of a service worker and implement optimisations
-                    to improve the performance of this application.
+                <p>In a previous project, I created this web application on the client-side making a Single Web
+                    Application. In this project, I will be redesigning this into a server-side rendered Progressive Web
+                    App. My assignment is to dive into the functionalities of a service worker and implement
+                    optimizations to improve the performance of this application.
                 </p>
             </article>
 
             <article class="description">
                 <h2>Description</h2>
-                <p>Do you also spend too much time looking for a decent movie to watch?
-                    With this progressive web application you can see right away what the top movies are at this very
-                    moment! Find a movie to your liking, and make some popcorn instead of spending minutes to find a
-                    good title.</p>
+                <p>Do you also spend too much time looking for a decent movie to watch? With this progressive web
+                    application, you can see right away what the top movies are at this very moment! Find a movie to
+                    your liking, and make some popcorn instead of spending minutes to find a good title.</p>
             </article>
 
             <article class="highlightArticle">
                 <h2>Highlights</h2>
                 <h3>Build scripts</h3>
-                <p>This course I was introduced to building scripts. With these building scripts I can concatonate and
-                    minify my css and js files and write them in a other folder. Everytime I start my app, the build
-                    scripts will run on pre start. This means that before the apps starts up, it will build new
-                    javascript and css files from my original files. I used the NPM package gulp for this.
-                    Below here is an example of how I concatonate and minify my javascript files.
+                <p>In this course, I was introduced to building scripts. With these building scripts, I can concatenate
+                    and minify my CSS and js files and write them in another folder. Every time I start my app, the
+                    build scripts will run on pre-start. This means that before the apps starts up, it will build new
+                    javascript and CSS files from my original files. I used the NPM package gulp for this. Below here is
+                    an example of how I concatenate and minify my javascript files.
                     <code>
                         <code>const gulp = require('gulp')</code>
                     <code>const concat = require('gulp-concat');</code>
@@ -164,8 +162,8 @@
 
 
                 <h3>Install the application</h3>
-                <p>For this application I added a manifest and a service-worker. Because of this you can install the
-                    application on your device as an (web)app.
+                <p>For this application, I added a manifest and a service worker. Because of this, you can install the
+                    application on your device as a (web)app.
                 </p>
                 <img src="https://user-images.githubusercontent.com/55492381/136652943-bbdba5ab-e3ef-4da3-a52f-7f785a610cee.png"
                     alt="Intall the app">
@@ -181,26 +179,23 @@
                     offline page instead of the usual no internet page.</p>
 
                 <h4>Caches and faster loading</h4>
-                <p>My service worker also caches all the pages you visit.
-                    I fully realise this might not be the best strategy if you have a very large application, but for a
-                    small one like mine, this is in my opinion acceptable. The next time you visit a page that you've
-                    already visited, it renders it from the cache.
-                    This has advantages and disadvantages.
-                    The advantages are: faster loading (like alot) and you can also visit the pages when your internet
-                    connection fails.
-                    The disadvantage is that you render out of date content from the cache.</p>
+                <p>My service worker also caches all the pages you visit. I fully realize this might not be the best
+                    strategy if you have a very large application, but for a small one like mine, this is in my opinion
+                    acceptable. The next time you visit a page that you've already visited, it renders it from the
+                    cache. This has advantages and disadvantages. The advantages are: faster loading (like a lot) and
+                    you can also visit the pages when your internet connection fails. The disadvantage is that you
+                    render out-of-date content from the cache.</p>
                 <p>
-                    For this disadvantage I save the last updated content again to the cache while its rendering. This
-                    means, the next time you visit that page you will get the updated content. Not an ideal solution,
-                    but perhaps acceptable for pages that almost never changes its content.
+                    For this disadvantage, I save the last updated content again to the cache while it's rendering. This
+                    means the next time you visit that page you will get the updated content. Not an ideal solution, but
+                    perhaps acceptable for pages that almost never change their content.
                 </p>
 
                 <h4>Render from web but cache it all the same</h4>
-                <p>I have the /movie page that shows the most popular movies at that time.
-                    This isnt a page that you want to have outdated. So I wrote some exceptional rules for this page.
-                    If you have internet, render this page from the internet and save it in the cache.
-                    If you don't have internet, render this page from the cache. This is always better then no page at
-                    all, although it might be outdated.</p>
+                <p>I have the /movie page that shows the most popular movies at that time. This isn't a page that you
+                    want to have outdated. So I wrote some exceptional rules for this page. If you have internet, render
+                    this page from the internet and save it in the cache. If you don't have internet, render this page
+                    from the cache. This is always better than no page at all, although it might be outdated.</p>
 
                 <img src="https://user-images.githubusercontent.com/55492381/112005043-acd94080-8b22-11eb-8bcd-b37e117c0101.png"
                     alt="Offline page">
@@ -209,30 +204,36 @@
 
                 <h3>Compression</h3>
                 <p>To make this app even faster I compress my files by using Gzip compression.
-                    This might be overrated in this small app, but I wanted to see what it does and how it works..</p>
-                <p>It turns out, using Gzip as a compression is fairly easy. Just install the package and use it. There
+                    This might be overrated in this small app, but I wanted to see what it does and how it works.
+                </p>
+                <p>It turns out, using Gzip as compression is fairly easy. Just install the package and use it. There
                     are some options you can use though. I used a threshold option here and gave it a value of 0. This
-                    means that it compresses all the files that are bigger then 0 bytes. You could if you want set it to
-                    1kb if you want to skip the comporession of very small files. I also use a filter funciton
-                    shouldCompress that checks if the request headers are set to x-no-compression if so, it doenst
-                    compress those files.</p>
+                    means that it compresses all the files that are bigger than 0 bytes. You could if you want to set it
+                    to 1kb if you want to skip the compression of very small files. I also use a filter function
+                    shouldCompress that checks if the request headers are set to x-no-compression if so, it doesn't
+                    compress those files.
+                </p>
 
                 <h3>Critical CSS</h3>
                 <p>Performance is all about perceived performance. And part of that is how to get most of the website as
                     quickly to the user. Critical CSS is a big part of that for bigger websites or apps but I researched
-                    this topic nontheless for my simple app.</p>
+                    this topic nonetheless for my simple app.
+                </p>
                 <p>In the screenshot below you can see the difference between the stylesheets coverage. About 72% of the
-                    normal stylesheet is not needed in this specific page at all, while there is no unused css code for
-                    the critical css stylesheet.</p>
+                    normal stylesheet is not needed on this specific page at all, while there is no unused CSS code for
+                    the critical CSS stylesheet.
+                </p>
                 <img src="https://user-images.githubusercontent.com/55492381/111996432-4ea85f80-8b1a-11eb-986c-ce371f715eb7.png"
                     alt="screenshot unnused css percentage">
 
                 <h3>Minify</h3>
-                <p>Every character costs bytes in your file. And you want every file to be as less bytes as it can be.
-                    Less bytes is faster loading, thats also why we compress the files as described above. Another step
-                    to lessen the amount of bytes is minifying your files. This means that you re-write the code with
-                    short names and less space. To rewrite these code files you can use packages like gulp-clean-css and
-                    gulp-minify. There are more, but in this project I am already using gulp to concatenate files.</p>
+                <p>Every character costs bytes in your file. And you want every file to be as few bytes as it can be.
+                    Fewer bytes is faster loading, that's also why we compress the files as described above. Another
+                    step to lessen the amount of bytes is minifying your files. This means that you re-write the code
+                    with short names and less space. To rewrite these code files you can use packages like
+                    gulp-clean-css and gulp-minify. There are more, but in this project, I am already using gulp to
+                    concatenate files.
+                </p>
 
 
             </article>
